@@ -3,20 +3,19 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#",
-        text: "Бизнес",
-        isActive: true,
+        text: "Каталогс",
       },
       {
         href: "#",
-        text: "О нас"
+        text: "О&nbsp;компании"
       },
       {
         href: "#",
-        text: "Цены"
+        text: "Сервис"
       },
       {
         href: "#",
-        text: "Оформить заказ"
+        text: "Контакты"
       }
     ]
 
@@ -24,15 +23,27 @@ mixin header(headerMods, currentUrl)
     .container
       .header__wrapper
         if(currentUrl === "index.html")
-          span.header__logo
-            +icon("logo", 247, 35)
-        else
-          a.header__logo(href="index.html", aria-label="Переход на главную")
-            +icon("logo", 247, 35)
+          a.header__logo(href="/", aria-label="Переход на главную")
+            img(src="img/svg/logo.svg", width="210" height="85" alt="Логотип Электрический Заряд")
         nav.main-nav
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
-          ul.main-nav__list
-            each item in headerLinks
-              li.main-nav__item
-                a.main-nav__link(class={"is-active": item.isActive} href=item.href)!=item.text
+            span
+            span
+            span
+          .main-nav__menu
+            .main-nav__top
+              a.main-nav__link.main-nav__link--grey(href="#") Санкт-Петербург
+              .main-nav__info
+                a.main-nav__link.main-nav__link--grey(href="#") Доставка и&nbsp;оплата
+                a.main-nav__link.main-nav__link--grey(href="#") Гарантия и&nbsp;возврат
+            .main-nav__bottom
+              ul.main-nav__list
+                each item in headerLinks
+                  li.main-nav__item
+                    a.main-nav__link(href=item.href)!=item.text
+              .main-nav__additional-info
+                a.main-nav__call(href="#") Заказать звонок
+                a.main-nav__phone(href="tel:88124256427") 8 (812) 425-64-27
+                a.main-nav__basket(href="#" aria-label="Корзина")
+                  +icon("icon-basket", 32, 32)
 

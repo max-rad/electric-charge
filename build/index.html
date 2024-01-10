@@ -6,28 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Global">
-    <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Lato-SemiBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Lato-Bold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Lato-ExtraBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header" data-header>
         <div class="container">
-          <div class="header__wrapper"><span class="header__logo">
-              <svg width="247" height="35" aria-hidden="true">
-                <use xlink:href="/img/sprite.svg#logo"></use>
-              </svg></span>
+          <div class="header__wrapper"><a class="header__logo" href="/" aria-label="Переход на главную"><img src="img/svg/logo.svg" width="210" height="85" alt="Логотип Электрический Заряд"></a>
             <nav class="main-nav">
-              <button class="btn-reset main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-toggle-menu></button>
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link is-active" href="#">Бизнес</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Цены</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Оформить заказ</a></li>
-              </ul>
+              <button class="btn-reset main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-toggle-menu><span></span><span></span><span></span></button>
+              <div class="main-nav__menu">
+                <div class="main-nav__top"><a class="main-nav__link main-nav__link--grey" href="#">Санкт-Петербург</a>
+                  <div class="main-nav__info"><a class="main-nav__link main-nav__link--grey" href="#">Доставка и&nbsp;оплата</a><a class="main-nav__link main-nav__link--grey" href="#">Гарантия и&nbsp;возврат</a></div>
+                </div>
+                <div class="main-nav__bottom">
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Каталогс</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">О&nbsp;компании</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Сервис</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+                  </ul>
+                  <div class="main-nav__additional-info"><a class="main-nav__call" href="#">Заказать звонок</a><a class="main-nav__phone" href="tel:88124256427">8 (812) 425-64-27</a><a class="main-nav__basket" href="#" aria-label="Корзина">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#icon-basket"></use>
+                      </svg></a></div>
+                </div>
+              </div>
             </nav>
           </div>
         </div>

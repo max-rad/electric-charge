@@ -1,42 +1,50 @@
 .main-nav {
+  width: 100%;
+
   &__toggle {
     z-index: 11;
     position: relative;
     display: none;
 
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 34px;
 
     cursor: pointer;
     user-select: none;
 
     transition: opacity $trans-default;
 
-    @include vp-767 {
+    @include vp-1023 {
       display: block;
     }
 
-    &::before,
-    &::after {
-      content: "";
+    span {
+      display: block;
       position: absolute;
 
       left: 0;
 
       width: 100%;
-      height: 2px;
+      height: 6px;
 
-      background-color: $color-default-white;
+      border-radius: 3px;
+      background-color: $color-pumpkin;
 
-      transition: transform $trans-default;
-    }
+      transition: transform $trans-default, opacity $trans-default, visibility $trans-default;
 
-    &::before {
-      top: 10px;
-    }
+      &:nth-child(1) {
+        top: 0;
+      }
 
-    &::after {
-      bottom: 10px;
+      &:nth-child(2) {
+        top: 50%;
+
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+      }
     }
 
     @include hover-focus {
@@ -44,15 +52,8 @@
     }
   }
 
-  &__list {
-    display: flex;
-
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    @include vp-767 {
+  &__menu {
+    @include vp-1023 {
       z-index: 10;
       position: fixed;
       flex-direction: column;
@@ -70,54 +71,136 @@
 
       transition: transform $trans-default, visibility $trans-default, opacity $trans-default;
       transform: translateX(100%);
-
-      //visibility: hidden;
-      //opacity: 0;
     }
   }
 
+  &__top {
+    position: relative;
+    display: flex;
+    padding: 16px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $color-pumpkin;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 64px;
+    margin: 0 0 0 auto;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding: 18px 0 23px;
+  }
+
+  &__list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
   &__item {
-    margin-right: 60px;
-
-    @include vp-1023 {
-      margin-right: 30px;
-    }
-
-    @include vp-767 {
-      margin-right: 0;
-      margin-bottom: 30px;
-    }
+    margin: 0 58px 0 0;
 
     &:last-child {
       margin-right: 0;
-
-      @include vp-767 {
-        margin-bottom: 0;
-      }
     }
   }
 
   &__link {
     display: block;
 
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 16px;
-    text-transform: uppercase;
 
     color: $color-default-white;
 
     transition: opacity $trans-default;
     transform: translate3d(0, 0, 0);
 
-    &.is-active {
-      color: $color-summer-sky;
+    &--grey {
+      font-size: 400;
 
-      pointer-events: none;
+      color: rgba($color-default-white, 0.7);
     }
 
     @include hover-focus {
       opacity: 0.8;
+    }
+  }
+
+  &__additional-info {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+  }
+
+  &__call {
+    margin: 0 86px 0 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
+
+    color: $color-pumpkin;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__phone {
+    margin: 0 50px 0 0;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: normal;
+
+    color: $color-default-white;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 32px;
+      height: 32px;
+
+      transition: opacity $trans-default;
+    }
+
+    @include hover-focus {
+      svg {
+        opacity: 0.8;
+      }
     }
   }
 }
