@@ -3,7 +3,7 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#",
-        text: "Каталогс",
+        text: "Каталог",
       },
       {
         href: "#",
@@ -19,7 +19,7 @@ mixin header(headerMods, currentUrl)
       }
     ]
 
-  header.header(class=headerMods data-header)
+  header.header(class=headerMods data-header data-media="(max-width: 1199px)")
     .container
       .header__wrapper
         if(currentUrl === "index.html")
@@ -43,7 +43,9 @@ mixin header(headerMods, currentUrl)
                     a.main-nav__link(href=item.href)!=item.text
               .main-nav__additional-info
                 a.main-nav__call(href="#") Заказать звонок
-                a.main-nav__phone(href="tel:88124256427") 8 (812) 425-64-27
+                .main-nav__contacts
+                  a.main-nav__phone(href="tel:88124256427") 8 (812) 425-64-27
+                  +socials().main-nav__socials
                 a.main-nav__basket(href="#" aria-label="Корзина")
                   +icon("icon-basket", 32, 32)
-
+      +menu().header__menu

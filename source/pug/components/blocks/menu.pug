@@ -1,0 +1,39 @@
+mixin menu()
+  -
+    const list = [
+      {
+        href: "#",
+        icon: {
+          name: "icon-call",
+          width: "24",
+          height: "24"
+        },
+        text: "Контакты"
+      },
+      {
+        href: "#",
+        icon: {
+          name: "icon-category",
+          width: "24",
+          height: "24"
+        },
+        text: "Каталог"
+      },
+      {
+        href: "#",
+        icon: {
+          name: "icon-basket",
+          width: "24",
+          height: "24"
+        },
+        text: "Корзина"
+      }
+    ]
+
+  .menu&attributes(attributes)
+    ul.list-reset.menu__list
+      each item in list
+        li.menu__item
+          a.menu__link(href=item.href)
+            +icon(item.icon.name, item.icon.width, item.icon.height)
+            !=item.text

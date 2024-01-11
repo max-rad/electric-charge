@@ -1,0 +1,47 @@
+mixin socials()
+  -
+    const list = [
+      {
+        href: "#",
+        ariaLabel: "Vkontakte",
+        icon: {
+          name: "icon-vk",
+          width: "32",
+          height: "32"
+        }
+      },
+      {
+        href: "#",
+        ariaLabel: "Telegram",
+        icon: {
+          name: "icon-telegram",
+          width: "32",
+          height: "32"
+        }
+      },
+      {
+        href: "#",
+        ariaLabel: "WhatsApp",
+        icon: {
+          name: "icon-whatsapp",
+          width: "32",
+          height: "32"
+        }
+      },
+      {
+        href: "#",
+        ariaLabel: "Youtube",
+        icon: {
+          name: "icon-youtube",
+          width: "32",
+          height: "32"
+        }
+      }
+    ]
+
+  .socials&attributes(attributes)
+    ul.list-reset.socials__list
+      each item in list
+        li.socials__item
+          a.socials__link(href=item.href aria-label=item.ariaLabel)
+            +icon(item.icon.name, item.icon.width, item.icon.height)
