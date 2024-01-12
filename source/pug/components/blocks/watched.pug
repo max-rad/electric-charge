@@ -1,0 +1,120 @@
+mixin watched()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "280",
+          height: "280",
+          alt: "Зеленый квадроцикл"
+        },
+        type: "Электроквадроцикл",
+        title: "Электроквадроцикл Сахара А14К 4&times;4 Monster",
+        price: "1&nbsp;203&nbsp;000&nbsp;₽",
+        oldPrice: "1&nbsp;000&nbsp;000&nbsp;₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-7",
+          format: "webp",
+          width: "280",
+          height: "280",
+          alt: "Черный электросамокат"
+        },
+        type: "Электросамокат",
+        title: "Электросамокат Electric Scooter m365",
+        price: "35&nbsp;000&nbsp;₽",
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-5",
+          format: "webp",
+          width: "280",
+          height: "280",
+          alt: "Черный электроскутер"
+        },
+        type: "Электроскутер",
+        title: "Электроскутер GreenCamel Трофи SUMMA",
+        price: "54&nbsp;800&nbsp;₽",
+        oldPrice: "74&nbsp;800&nbsp;₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-6",
+          format: "webp",
+          width: "280",
+          height: "280",
+          alt: "Черный электросамокат"
+        },
+        type: "Электросамокат",
+        title: "Электросамокат Electric Scooter m365",
+        price: "35&nbsp;000&nbsp;₽",
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "280",
+          height: "280",
+          alt: "Зеленый квадроцикл"
+        },
+        type: "Электроквадроцикл",
+        title: "Электроквадроцикл Сахара А14К 4&times;4 Monster",
+        price: "1&nbsp;203&nbsp;000&nbsp;₽",
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-7",
+          format: "webp",
+          width: "280",
+          height: "280",
+          alt: "Черный электросамокат"
+        },
+        type: "Электросамокат",
+        title: "Электросамокат Electric Scooter m365",
+        price: "35&nbsp;000&nbsp;₽",
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-5",
+          format: "webp",
+          width: "280",
+          height: "280",
+          alt: "Черный электроскутер"
+        },
+        type: "Электроскутер",
+        title: "Электроскутер GreenCamel Трофи SUMMA",
+        price: "54&nbsp;800&nbsp;₽",
+        oldPrice: "74&nbsp;800&nbsp;₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-6",
+          format: "webp",
+          width: "280",
+          height: "280",
+          alt: "Черный электросамокат"
+        },
+        type: "Электросамокат",
+        title: "Электросамокат Electric Scooter m365",
+        price: "35&nbsp;000&nbsp;₽",
+      }
+    ]
+
+  +section({title: "Вы смотрели"})
+    .watched
+      +slider-controls("watched")
+      .watched__slider.swiper(data-slider="watched")
+        .watched__slides.swiper-wrapper
+          each item in list
+            .watched__slide.swiper-slide
+              +product-card(item)

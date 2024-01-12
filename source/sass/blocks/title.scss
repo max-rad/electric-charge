@@ -1,0 +1,27 @@
+.title {
+  margin: 0;
+
+  &--h2 {
+    margin: 0 0 32px;
+
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+
+    color: $color-default-black;
+
+    @include vp-1199 {
+      margin: 0 0 50px;
+
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    @include vp-1023 {
+      margin: 0 0 40px;
+
+      font-size: 32px;
+      line-height: 45px;
+    }
+  }
+}

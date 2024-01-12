@@ -1,3 +1,39 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "Каталог"
+      },
+      {
+        href: "#",
+        text: "О&nbsp;компании"
+      },
+      {
+        href: "#",
+        text: "Сервис"
+      }
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        .footer__socials
+          a.footer__logo(href="/" aria-label="Переход на главную")
+            img(src="img/svg/logo-footer.svg", width="210" height="85" alt="Логотип Электрический Заряд")
+          +socials()
+        .footer__contacts
+          p.footer__label Контактная информация:
+          a.footer__address(href="#") Санкт-Петербург, Заневский проспект, 30к2
+          a.footer__email(href="mailto:Electriccharge.info@yandex.ru") Electriccharge.info@yandex.ru
+          a.footer__phone(href="tel:88124256427") 8 (812) 425-64-27
+        .footer__service
+          p.footer__label Услуги
+          ul.footer__list
+            each item in footerLinks
+              li.footer__item
+                a.footer__link(href=item.href)!=item.text
+        .footer__info
+          a.footer__offer(href="#") Публичная оферта
+          a.footer__policy(href="#") Политика персональных данных
+

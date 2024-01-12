@@ -5,6 +5,9 @@ import {initModals} from './modules/modal/init-modals';
 import {initPhoneMask} from './modules/init-phone-mask';
 import {initPhoneValidation} from './modules/init-phone-validation';
 import {initIntroSlider} from './modules/sliders/init-intro-slider';
+import {initCategoriesSlider} from './modules/sliders/init-categories-slider';
+import {initRecommendSlider} from './modules/sliders/init-recommend-slider';
+import {initWatchedSlider} from './modules/sliders/init-watched-slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -16,5 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initPhoneMask();
     initPhoneValidation();
     initIntroSlider();
+    initCategoriesSlider();
+    initRecommendSlider();
+    initWatchedSlider();
   });
 });

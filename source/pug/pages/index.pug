@@ -1,16 +1,20 @@
 extends ../components/base/layout
 
 block variables
-    - const title = "global"
+    - const title = "Электрический заряд"
     - const wrapperMods = ""
     - const hasHeader = true
     - const headerMods = ""
-    - const hasFooter = false
+    - const hasFooter = true
     - const footerMods = ""
     - const currentUrl = "index.html"
 
 block main
     main
       +intro()
+      +categories()
+      +brands()
+      +recommend()
+      +watched()
 
 block modals

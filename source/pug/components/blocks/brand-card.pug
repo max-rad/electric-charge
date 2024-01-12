@@ -1,0 +1,4 @@
+mixin brand-card(data)
+  .brand-card
+    .brand-card__image
+      +img("content/brands", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

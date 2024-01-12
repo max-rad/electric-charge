@@ -7,6 +7,7 @@ const initIntroSlider = () => {
 
   const swiper = new Swiper(slider, {
     slidesPerView: 1,
+    speed: 600,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -14,7 +15,7 @@ const initIntroSlider = () => {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    }
+    },
   });
 };
 

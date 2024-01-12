@@ -1,0 +1,84 @@
+mixin brands()
+  -
+    const list = [
+      {
+        image: {
+          src: "logo-xiaomi",
+          format: "webp",
+          width: "200",
+          height: "90",
+          alt: "Логотип Xiaomi"
+        }
+      },
+      {
+        image: {
+          src: "logo-white-siberia",
+          format: "webp",
+          width: "200",
+          height: "90",
+          alt: "Логотип White Siberia"
+        }
+      },
+      {
+        image: {
+          src: "logo-green-camel",
+          format: "webp",
+          width: "200",
+          height: "90",
+          alt: "Логотип Green Camel"
+        }
+      },
+      {
+        image: {
+          src: "logo-syccyba",
+          format: "webp",
+          width: "200",
+          height: "90",
+          alt: "Логотип Syccyba"
+        }
+      },
+      {
+        image: {
+          src: "logo-minako",
+          format: "webp",
+          width: "200",
+          height: "90",
+          alt: "Логотип Minako"
+        }
+      },
+      {
+        image: {
+          src: "logo-volteco",
+          format: "webp",
+          width: "200",
+          height: "90",
+          alt: "Логотип Volteco"
+        }
+      },
+      {
+        image: {
+          src: "logo-ninebot",
+          format: "webp",
+          width: "200",
+          height: "90",
+          alt: "Логотип Ninebot"
+        }
+      },
+      {
+        image: {
+          src: "logo-eltreco",
+          format: "webp",
+          width: "200",
+          height: "90",
+          alt: "Логотип Eltreco"
+        }
+      }
+    ]
+
+  +section({title: "Бренды"})
+    .brands
+      ul.list-reset.brands__list
+        each item in list
+          li.brands__item
+            +brand-card(item)
+      +btn({href: "#", text: "Смотреть все"}).brands__button

@@ -2,7 +2,11 @@
 <clipPath id="clip0_1768_5008">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
-</defs><symbol id="icon-basket" viewBox="0 0 32 32"><g fill="none">
+</defs><symbol id="icon-arrow-left" viewBox="0 0 24 24"><g fill="none">
+<path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol><symbol id="icon-arrow-right" viewBox="0 0 24 24"><g fill="none">
+<path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol><symbol id="icon-basket" viewBox="0 0 32 32"><g fill="none">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.85593 12.4C6.83849 11.0932 7.86147 10.019 9.14157 10H22.8555C24.1356 10.019 25.1586 11.0932 25.1411 12.4V23.2C25.1767 25.814 23.1303 27.9627 20.5698 28H11.4272C8.8667 27.9627 6.82033 25.814 6.85593 23.2V12.4Z" stroke="#F27121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M20.5688 13.6V8.8C20.6044 6.18604 18.5581 4.03729 15.9975 4C13.437 4.03729 11.3906 6.18604 11.4262 8.8V13.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="icon-call" viewBox="0 0 25 24"><g fill="none">

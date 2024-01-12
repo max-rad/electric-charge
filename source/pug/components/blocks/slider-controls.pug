@@ -1,0 +1,6 @@
+mixin slider-controls(dataset)
+  .slider-controls(data-buttons=dataset)
+    button.btn-reset.slider-controls__control.slider-controls__control--prev(type="button" aria-label="Предыдущий слайд" data-button-prev)
+      +icon("icon-arrow-left", 24, 24)
+    button.btn-reset.slider-controls__control.slider-controls__control--next(type="button" aria-label="Следующий слайд" data-button-next)
+      +icon("icon-arrow-right", 24, 24)

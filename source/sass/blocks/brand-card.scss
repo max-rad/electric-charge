@@ -1,0 +1,19 @@
+.brand-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 194px;
+  padding: 20px;
+
+  background-color: $color-default-white;;
+  box-shadow: 0 0 8px 0 rgba($color-default-black, 0.15);
+
+  &__image {
+    img {
+      width: 200px;
+      height: 90px;
+
+      object-fit: contain;
+    }
+  }
+}

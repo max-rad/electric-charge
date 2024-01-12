@@ -1,0 +1,15 @@
+.recommend {
+  position: relative;
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__slides {
+    width: 100%;
+  }
+
+  &__slide {
+    height: auto;
+  }
+}

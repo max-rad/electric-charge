@@ -1,0 +1,102 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 19px;
+
+  border: 1px solid rgba($color-pink-swan, 0.6);
+  border-radius: 10px;
+  background-color: $color-default-white;
+
+  transition: border $trans-default;
+
+  @include hover-focus {
+    border: 1px solid rgba($color-very-light-grey, 0.6);
+
+    .product-card__button {
+      background-color: $color-pumpkin;
+    }
+  }
+
+  @include active {
+    border: 1px solid rgba($color-very-light-grey, 0.6);
+
+    .product-card__button {
+      background-color: $color-persimmon;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 24px;
+
+    border-radius: 8px;
+
+    img {
+      width: 280px;
+      height: auto;
+
+      border-radius: 8px;
+
+      object-fit: cover;
+    }
+  }
+
+  &__type {
+    margin: 0 0 12px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-grey;
+  }
+
+  &__title {
+    margin: 0 0 17px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: $color-default-black;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    align-items: baseline;
+    margin: auto 0 18px;
+  }
+
+  &__price {
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    white-space: nowrap;
+
+    color: $color-default-black;
+
+    &--orange {
+      color: $color-pumpkin;
+    }
+  }
+
+  &__old-price {
+    margin: 0 0 0 10px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    white-space: nowrap;
+    text-decoration: line-through;
+
+    color: $color-grey;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
