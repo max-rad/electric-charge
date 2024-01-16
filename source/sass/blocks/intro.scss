@@ -6,14 +6,17 @@
   }
 
   &__slider {
+    position: static;
     width: 100%;
   }
 
   &__slides {
+    position: static;
     width: 100%;
   }
 
   &__slide {
+    position: static;
     display: flex;
   }
 
@@ -23,6 +26,11 @@
   }
 
   &__image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
     width: 100%;
     height: 100%;
 
@@ -31,6 +39,157 @@
       height: 100%;
 
       object-fit: cover;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 113px 0 156px;
+
+    @include vp-1199 {
+      padding: 90px 0 76px;
+    }
+
+    @include vp-767 {
+      padding: 60px 0;
+    }
+  }
+
+  &__title {
+    @include vp-1199 {
+      font-size: 64px;
+      line-height: 64px;
+    }
+
+    @include vp-767 {
+      display: none;
+
+      font-size: 54px;
+      line-height: 54px;
+    }
+
+    @include vp-389 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 300px;
+    margin: 40px 0 0;
+
+    @include vp-1199 {
+      order: 1;
+    }
+
+    @include vp-767 {
+      display: none;
+      max-width: 200px;
+      margin: 50px 0 0;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include vp-767 {
+        display: flex;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 576px;
+    margin: 50px 0 0;
+
+    @include vp-1199 {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    @include vp-767 {
+      margin: 40px 0 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @include vp-1199 {
+      align-items: flex-start;
+      width: auto;
+      margin: 0 0 30px;
+    }
+
+    &::after {
+      content: "";
+
+      width: 100%;
+      height: 1px;
+      margin: 0 10px;
+
+      background-color: $color-default-white;
+
+      @include vp-1199 {
+        content: none;
+      }
+    }
+
+    &:last-child {
+      width: auto;
+
+      @include vp-1199 {
+        margin: 0;
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 210px;
+    margin: 12px 0 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-white;
+
+    @include vp-1199 {
+      position: relative;
+      max-width: 258px;
+      margin: 0 0 0 10px;
     }
   }
 

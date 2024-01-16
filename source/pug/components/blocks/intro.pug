@@ -50,9 +50,25 @@ mixin intro()
           each item in list
             .intro__slide.swiper-slide
               a.intro__link(href=item.href)
-                .intro__image
-                  picture
-                    source(media="(max-width: 767px)" srcset="img/content/intro/" + item.image.src + "-mobile" + "." + item.image.format + ", " + "img/content/intro/" + item.image.src + "-mobile" + "@2x." + item.image.format)
-                    source(media="(max-width: 1023px)" srcset="img/content/intro/" + item.image.src + "-tablet" + "." + item.image.format + ", " + "img/content/intro/" + item.image.src + "-tablet" + "@2x." + item.image.format)
-                    img(src="img/content/intro/" + item.image.src + "." + item.image.format srcset="img/content/intro/" + item.image.src + "@2x." + item.image.format width=item.image.width height=item.image.height alt=item.image.alt)
+                .container
+                  .intro__image
+                    picture
+                      source(media="(max-width: 767px)" srcset="img/content/intro/" + item.image.src + "-mobile" + "." + item.image.format + ", " + "img/content/intro/" + item.image.src + "-mobile" + "@2x." + item.image.format)
+                      source(media="(max-width: 1023px)" srcset="img/content/intro/" + item.image.src + "-tablet" + "." + item.image.format + ", " + "img/content/intro/" + item.image.src + "-tablet" + "@2x." + item.image.format)
+                      img(src="img/content/intro/" + item.image.src + "." + item.image.format srcset="img/content/intro/" + item.image.src + "@2x." + item.image.format width=item.image.width height=item.image.height alt=item.image.alt)
+                  .intro__info
+                    h1.title.title--h1.intro__title Интернет-магазин электротранспорта
+                    h1.title.title--h1.intro__title.intro__title--mobile Магазин электро транспорта
+                    +btn({type: "button", text: "Перейти в&nbsp;каталог"}).btn--orange.intro__button
+                    +btn({type: "button", text: "Каталог"}).btn--orange.intro__button.intro__button--mobile
+                    ul.list-reset.intro__list
+                      li.intro__item
+                        +icon("icon-check-circle", 32, 32)
+                        p.intro__text Мощные литиевые батареи
+                      li.intro__item
+                        +icon("icon-check-circle", 32, 32)
+                        p.intro__text Быстрая и&nbsp;удобная доставка
+                      li.intro__item
+                        +icon("icon-check-circle", 32, 32)
+                        p.intro__text 100% оригинальная продукция
         .swiper-pagination

@@ -31,6 +31,25 @@
     color: $color-persimmon;
   }
 
+  &--orange {
+    padding: 17px 20px;
+
+    background-color: $color-pumpkin;
+    color: $color-default-white;
+
+    @include hover-focus {
+      border: none;
+      background-color: $color-flamenco;
+      color: $color-default-white;
+    }
+
+    @include active {
+      border: none;
+      background-color: $color-persimmon;
+      color: $color-default-white;
+    }
+  }
+
   &--black {
     border: none;
     background-color: $color-night-rider;
