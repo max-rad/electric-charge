@@ -6,4 +6,16 @@
       padding: 60px 0;
     }
   }
+
+  &__title {
+    margin: 0 0 32px;
+
+    @include vp-1199 {
+      margin: 0 0 50px;
+    }
+
+    @include vp-1023 {
+      margin: 0 0 40px;
+    }
+  }
 }

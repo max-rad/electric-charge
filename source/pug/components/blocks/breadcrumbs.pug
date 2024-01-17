@@ -1,0 +1,6 @@
+mixin breadcrumbs(list)
+  .breadcrumbs
+    ul.list-reset.breadcrumbs__list
+      each item in list
+        li.breadcrumbs__item
+          a.breadcrumbs__link(class={"is-active" : item.isActive} href=item.href)!=item.text

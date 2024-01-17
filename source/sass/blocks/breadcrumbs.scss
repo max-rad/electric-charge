@@ -1,0 +1,65 @@
+.breadcrumbs {
+  margin: 0 0 4px;
+
+  @include vp-1199 {
+    margin: 0 0 30px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: ">";
+      display: block;
+      margin: 0 7px;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+
+      color: $color-grey;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: $color-grey;
+
+    transition: color $trans-default;
+
+    &.is-active {
+      color: $color-pumpkin;
+
+      pointer-events: none;
+    }
+
+    @include hover-focus {
+      color: $color-pumpkin;
+    }
+
+    @include active {
+      color: $color-persimmon;
+    }
+  }
+}

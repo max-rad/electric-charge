@@ -1,0 +1,310 @@
+mixin catalog()
+  -
+    const categoriesElements = [
+      {
+        button: "Электросамокаты",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Электровелосипеды",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Электроскутеры",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Сигвеи",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Электромотоциклы",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Моноколеса",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Электроквадроциклы",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Гироскутеры",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Рюкзаки пиксель",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      },
+      {
+        button: "Детские",
+        list: [
+          {
+            text: "Трехколесные"
+          },
+          {
+            text: "Городские"
+          },
+          {
+            text: "Электромопеды"
+          }
+        ]
+      }
+    ]
+
+  -
+    const filterElements = [
+      {
+        button: "Производители",
+        list: [
+          {
+            label: "Minipro",
+            name: "minipro"
+          },
+          {
+            label: "Xiaomi",
+            name: "xiaomi"
+          },
+          {
+            label: "Elbike",
+            name: "elbike"
+          },
+          {
+            label: "EL-Sport",
+            name: "el-sport"
+          },
+          {
+            label: "Yokamura",
+            name: "yokamura"
+          },
+          {
+            label: "Ninebot",
+            name: "ninebot"
+          },
+          {
+            label: "White Siberia",
+            name: "white siberia"
+          },
+          {
+            label: "GREEN CITY",
+            name: "green city"
+          },
+          {
+            label: "ELTRECO",
+            name: "eltreco"
+          },
+          {
+            label: "Minipro",
+            name: "minipro"
+          },
+          {
+            label: "Smart Balance",
+            name: "smart balance"
+          },
+          {
+            label: "Currus",
+            name: "currus"
+          },
+          {
+            label: "GT",
+            name: "gt"
+          },
+          {
+            label: "WoLong",
+            name: "wolong"
+          }
+        ]
+      },
+      {
+        button: "Мощность",
+        list: [
+          {
+            label: "100 ватт",
+            name: "100watt"
+          },
+          {
+            label: "200 ватт",
+            name: "200watt"
+          },
+          {
+            label: "300 ватт",
+            name: "300watt"
+          }
+        ]
+      },
+      {
+        button: "Максимальный запас хода",
+        list: [
+          {
+            label: "Есть",
+            name: "yes"
+          },
+          {
+            label: "Нет",
+            name: "no"
+          }
+        ]
+      },
+      {
+        button: "Год выпуска",
+        list: [
+          {
+            label: "Есть",
+            name: "yes"
+          },
+          {
+            label: "Нет",
+            name: "no"
+          }
+        ]
+      },
+      {
+        button: "Тип колёс",
+        list: [
+          {
+            label: "Есть",
+            name: "yes"
+          },
+          {
+            label: "Нет",
+            name: "no"
+          }
+        ]
+      },
+      {
+        button: "Дисплей",
+        list: [
+          {
+            label: "Есть",
+            name: "yes"
+          },
+          {
+            label: "Нет",
+            name: "no"
+          }
+        ]
+      },
+      {
+        button: "Складной",
+        list: [
+          {
+            label: "Есть",
+            name: "yes"
+          },
+          {
+            label: "Нет",
+            name: "no"
+          }
+        ]
+      },
+      {
+        button: "Подножка",
+        list: [
+          {
+            label: "Есть",
+            name: "yes"
+          },
+          {
+            label: "Нет",
+            name: "no"
+          }
+        ]
+      }
+    ]
+
+  .catalog
+    .catalog__aside
+      +catalog-categories(categoriesElements).catalog__categories
+      +catalog-filter(filterElements)
+    .catalog__main

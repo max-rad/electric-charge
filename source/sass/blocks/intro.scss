@@ -23,6 +23,18 @@
   &__link {
     display: block;
     width: 100%;
+
+    @include hover-focus {
+      .intro__button {
+        background-color: $color-flamenco;
+      }
+    }
+
+    @include active {
+      .intro__button {
+        background-color: $color-persimmon;
+      }
+    }
   }
 
   &__image {

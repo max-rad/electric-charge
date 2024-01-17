@@ -1,0 +1,19 @@
+mixin catalog-filter(elements)
+  .catalog-filter
+    h2.catalog-filter__title Фильтры
+    .catalog-filter__wrapper
+      .catalog-filter__accordion(data-accordion="parent")
+        each element in elements
+          .catalog-filter__element(data-accordion="element")
+            button.btn-reset.catalog-filter__button(type="button" data-accordion="button")
+              +icon("icon-chevron-down", 24, 24)
+              !=element.button
+            .catalog-filter__content(data-accordion="content")
+              .catalog-filter__content-wrapper
+                ul.list-reset.catalog-filter__list
+                  each item in element.list
+                    li.catalog-filter__item
+                      +custom-checkbox({
+                        label: item.label,
+                        name: item.name
+                      }).catalog-filter__checkbox
