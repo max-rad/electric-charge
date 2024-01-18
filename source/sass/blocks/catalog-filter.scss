@@ -1,5 +1,29 @@
 .catalog-filter {
-  &__title {
+  &__accordion {
+    width: 100%;
+  }
+
+  &__element {
+    width: 100%;
+
+    @include vp-1199 {
+      &.is-active {
+        .catalog-filter__button {
+          color: $color-pumpkin;
+
+          svg {
+            color: $color-pumpkin;
+
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
     margin: 0 0 30px;
 
     font-weight: 500;
@@ -7,6 +31,55 @@
     line-height: 34px;
 
     color: $color-default-black;
+
+    transition: color $trans-default;
+
+    svg {
+      flex-shrink: 0;
+
+      display: none;
+      width: 24px;
+      height: 24px;
+      margin: 0 10px 0 0;
+      padding: 5px;
+
+      transition: color $trans-default, transform $trans-default;
+
+      @include vp-1199 {
+        display: block;
+      }
+    }
+
+    @include vp-1199 {
+      margin: 0;
+
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+
+      cursor: pointer;
+      user-select: none;
+    }
+
+    @include hover-focus {
+      @include vp-1199 {
+        color: $color-pumpkin;
+
+        svg {
+          color: $color-pumpkin;
+        }
+      }
+    }
+
+    @include active {
+      @include vp-1199 {
+        color: $color-persimmon;
+
+        svg {
+          color: $color-persimmon;
+        }
+      }
+    }
   }
 
   &__wrapper {
@@ -14,13 +87,20 @@
 
     border-radius: 20px;
     background-color: $color-white-smoke;
+
+    @include vp-1199 {
+      padding: 10px 0 0;
+
+      border-radius: 0;
+      background-color: $color-transparent;
+    }
   }
 
-  &__accordion {
+  &__sub-accordion {
     width: 100%;
   }
 
-  &__element {
+  &__sub-element {
     width: 100%;
     margin: 0 0 20px;
 
@@ -29,7 +109,7 @@
     }
 
     &.is-active {
-      .catalog-filter__button {
+      .catalog-filter__sub-button {
         color: $color-pumpkin;
 
         svg {
@@ -41,7 +121,7 @@
     }
   }
 
-  &__button {
+  &__sub-button {
     display: flex;
     align-items: center;
     width: 100%;
@@ -57,6 +137,13 @@
 
     cursor: pointer;
     user-select: none;
+
+    @include vp-1199 {
+      justify-content: flex-start;
+
+      font-size: 16px;
+      line-height: 22px;
+    }
 
     svg {
       flex-shrink: 0;
@@ -88,7 +175,7 @@
     }
   }
 
-  &__content {
+  &__sub-content {
     width: 100%;
   }
 

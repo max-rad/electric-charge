@@ -1,0 +1,68 @@
+mixin product()
+  .product
+    .product__wrapper
+      .product__gallery
+        .product__slider.swiper(data-slider-gallery="main")
+          .product__slider-wrapper.swiper-wrapper
+            .product__slide.swiper-slide
+              .product__image
+                +img("content/product", "image-1", "webp", "800", "593", "image")
+            .product__slide.swiper-slide
+              .product__image
+                +img("content/product", "image-1", "webp", "800", "593", "image")
+            .product__slide.swiper-slide
+              .product__image
+                +img("content/product", "image-1", "webp", "800", "593", "image")
+            .product__slide.swiper-slide
+              .product__image
+                +img("content/product", "image-1", "webp", "800", "593", "image")
+            .product__slide.swiper-slide
+              .product__image
+                +img("content/product", "image-1", "webp", "800", "593", "image")
+            .product__slide.swiper-slide
+              .product__image
+                +img("content/product", "image-1", "webp", "800", "593", "image")
+            .product__slide.swiper-slide
+              .product__image
+                +img("content/product", "image-1", "webp", "800", "593", "image")
+            .product__slide.swiper-slide
+              .product__image
+                +img("content/product", "image-1", "webp", "800", "593", "image")
+        .product__vertical
+          +slider-controls("thumbs").slider-controls--vertical.product__slider-controls
+          .product__thumbs.swiper(data-slider-gallery="thumbs")
+            .product__thumbs-wrapper.swiper-wrapper
+              .product__thumb.swiper-slide
+                .product__image.product__image--small
+                  +img("content/product", "image-1", "webp", "90", "90", "image")
+              .product__thumb.swiper-slide
+                .product__image.product__image--small
+                  +img("content/product", "image-1", "webp", "90", "90", "image")
+              .product__thumb.swiper-slide
+                .product__image.product__image--small
+                  +img("content/product", "image-1", "webp", "90", "90", "image")
+              .product__thumb.swiper-slide
+                .product__image.product__image--small
+                  +img("content/product", "image-1", "webp", "90", "90", "image")
+              .product__thumb.swiper-slide
+                .product__image.product__image--small
+                  +img("content/product", "image-1", "webp", "90", "90", "image")
+              .product__thumb.swiper-slide
+                .product__image.product__image--small
+                  +img("content/product", "image-1", "webp", "90", "90", "image")
+              .product__thumb.swiper-slide
+                .product__image.product__image--small
+                  +img("content/product", "image-1", "webp", "90", "90", "image")
+              .product__thumb.swiper-slide
+                .product__image.product__image--small
+                  +img("content/product", "image-1", "webp", "90", "90", "image")
+      .product__info
+        .product__block
+          .product__price-wrapper
+            p.product__price 32&nbsp;000&nbsp;₽
+            p.product__old-price 52&nbsp;000&nbsp;₽
+          +btn({type: "button", text: "Добавить в&nbsp;корзину"}).btn--orange.product__button
+        .product__block
+          p.product__text Доставка курьером сегодня от&nbsp;250&nbsp;₽
+          p.product__text.product__text--orange Доставка по&nbsp;всей России
+          +btn({href: "#", text: "Подробнее о&nbsp;доставке и&nbsp;оплате"}).product__button

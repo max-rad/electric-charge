@@ -1,15 +1,20 @@
 mixin catalog-categories(elements)
   .catalog-categories&attributes(attributes)
-    h2.catalog-categories__title Категории
-    .catalog-categories__wrapper
-      .catalog-categories__accordion(data-accordion="parent")
-        each element in elements
-          .catalog-categories__element(data-accordion="element")
-            button.btn-reset.catalog-categories__button(type="button" data-accordion="button")!=element.button
-              +icon("icon-chevron-down", 24, 24)
-            .catalog-categories__content(data-accordion="content")
-              .catalog-categories__content-wrapper
-                ul.list-reset.catalog-categories__list
-                  each item in element.list
-                    li.catalog-categories__item
-                      a.catalog-categories__link(href="#")!=item.text
+    .catalog-categories__accordion(data-accordion="parent" data-destroy="(max-width: 1199px)")
+      .catalog-categories__element(data-accordion="element")
+        button.btn-reset.catalog-categories__button(type="button" data-accordion="button")
+          +icon("icon-chevron-down", 24, 24)
+          | Категории
+        .catalog-categories__content(data-accordion="content")
+          .catalog-categories__wrapper
+            .catalog-categories__sub-accordion(data-accordion="parent")
+              each element in elements
+                .catalog-categories__sub-element(data-accordion="element")
+                  button.btn-reset.catalog-categories__sub-button(type="button" data-accordion="button")!=element.button
+                    +icon("icon-chevron-down", 24, 24)
+                  .catalog-categories__sub-content(data-accordion="content")
+                    .catalog-categories__content-wrapper
+                      ul.list-reset.catalog-categories__list
+                        each item in element.list
+                          li.catalog-categories__item
+                            a.catalog-categories__link(href="#")!=item.text

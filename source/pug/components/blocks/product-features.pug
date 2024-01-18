@@ -1,0 +1,72 @@
+mixin product-features()
+  -
+    const list = [
+      {
+        label: "Работа от&nbsp;аккумулятора:",
+        description: "Да"
+      },
+      {
+        label: "Аккумулятор:",
+        description: "36v/4Ah"
+      },
+      {
+        label: "Длина:",
+        description: "102,57&nbsp;см"
+      },
+      {
+        label: "Ширина:",
+        description: "41,96&nbsp;см"
+      },
+      {
+        label: "Высота:",
+        description: "23,31&nbsp;см"
+      },
+      {
+        label: "Максимальная скорость движения:",
+        description: "20&nbsp;км/ч"
+      },
+      {
+        label: "Дальность хода:",
+        description: "12&nbsp;км"
+      },
+      {
+        label: "Производитель:",
+        description: "Ninebot"
+      },
+      {
+        label: "Гарантия:",
+        description: "1&nbsp;год"
+      },
+      {
+        label: "Модель:",
+        description: "KickScooter T15"
+      },
+      {
+        label: "Материал рамы:",
+        description: "Алюминий"
+      },
+      {
+        label: "Максимально допустимый вес:",
+        description: "100"
+      },
+      {
+        label: "Время зарядки:",
+        description: "3.5&nbsp;ч"
+      },
+      {
+        label: "Мощность:",
+        description: "250&nbsp;W"
+      },
+      {
+        label: "Дальность хода:",
+        description: "12&nbsp;км"
+      }
+    ]
+
+  +section({title: "Характеристики"})
+    .product-features
+      dl.product-features__list
+        each item in list
+          .product-features__item
+            dt.product-features__label!=item.label
+            dd.product-features__description!=item.description

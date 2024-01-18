@@ -45,6 +45,16 @@ export class CustomSelect {
       if (index === items.length - 1) {
         item.addEventListener('keydown', this._onLastSelectItemKeydown);
       }
+
+      if (item.getAttribute('aria-selected') === 'true') {
+        const parent = item.closest('[data-select]');
+        const buttonText = parent.querySelector('[data-select-button] .custom-select__text');
+        const itemText = item.textContent;
+        const options = parent.querySelectorAll('option');
+
+        buttonText.innerText = itemText;
+        options[index].selected = true;
+      }
     });
   }
 
@@ -69,7 +79,7 @@ export class CustomSelect {
 
     const activeItem = parent.querySelector('[data-select-item][aria-selected="true"]');
 
-    if (item.getAttribute('aria-selected') === true) {
+    if (item.getAttribute('aria-selected') === 'true') {
       this._closeSelect();
     } else {
       if (activeItem) {
@@ -78,7 +88,7 @@ export class CustomSelect {
 
       item.setAttribute('aria-selected', 'true');
       buttonText.innerText = itemText;
-      options[index + 1].selected = true;
+      options[index].selected = true;
       this._closeSelect();
     }
   }

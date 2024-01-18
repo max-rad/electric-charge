@@ -21,6 +21,10 @@
 
   outline: none;
 
+  @include vp-389 {
+    padding: 12px;
+  }
+
   @include hover-focus {
     border: 1px solid $color-pumpkin;
     color: $color-pumpkin;
@@ -31,12 +35,20 @@
     color: $color-persimmon;
   }
 
-  &--orange {
+  &--big {
     padding: 17px 20px;
+  }
+
+  &--orange {
+    padding: 13px 20px;
 
     border: none;
     background-color: $color-pumpkin;
     color: $color-default-white;
+
+    @include vp-767 {
+      padding: 13px;
+    }
 
     @include hover-focus {
       border: none;

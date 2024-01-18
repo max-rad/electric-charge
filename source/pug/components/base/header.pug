@@ -22,9 +22,8 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods data-header data-media="(max-width: 1199px)")
     .container
       .header__wrapper
-        if(currentUrl === "index.html")
-          a.header__logo(href="/", aria-label="Переход на главную")
-            img(src="img/svg/logo.svg", width="210" height="85" alt="Логотип Электрический Заряд")
+        a.header__logo(href="/", aria-label="Переход на главную")
+          img(src="img/svg/logo.svg", width="210" height="85" alt="Логотип Электрический Заряд")
         nav.main-nav
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
             span
