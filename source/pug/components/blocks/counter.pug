@@ -1,0 +1,9 @@
+mixin counter(quantity)
+  .counter&attributes(attributes)
+    button.btn-reset.counter__button.counter__button--minus(type="button")
+      +icon("icon-minus", 24, 24)
+    .counter__quantity
+      label
+        input(type="number" name="quantity" value=quantity)
+    button.btn-reset.counter__button.counter__button--plus(type="button")
+      +icon("icon-plus", 24, 24)

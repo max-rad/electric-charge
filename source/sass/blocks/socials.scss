@@ -1,4 +1,29 @@
 .socials {
+  &--footer {
+    .socials__list {
+      @include vp-767 {
+        column-gap: 16px;
+        row-gap: 16px;
+      }
+    }
+
+    .socials__item {
+      @include vp-767 {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .socials__link {
+      svg {
+        @include vp-767 {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +69,13 @@
 
     @include hover-focus {
       svg {
-        color: $color-burnt-orange;
+        color: $color-flamenco;
+      }
+    }
+
+    @include active {
+      svg {
+        color: $color-persimmon;
       }
     }
   }

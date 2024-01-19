@@ -1,0 +1,20 @@
+mixin basket-card(data)
+  .basket-card
+    .basket-card__checkbox
+      label
+        input(type="checkbox" name="selected" checked)
+        span.basket-card__icon
+          +icon("icon-check", 14, 14)
+    a.basket-card__link(href="#")
+      .basket-card__image
+        +img("content/basket", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+      h2.basket-card__title!=data.title
+    .basket-card__price-wrapper
+      if (data.oldPrice)
+        p.basket-card__old-price!=data.oldPrice
+      p.basket-card__price(class={"basket-card__price--orange" : data.oldPrice})!=data.price
+    +counter(data.quantity).basket-card__counter
+    p.basket-card__total-price!=data.totalPrice
+    button.btn-reset.basket-card__remove(type="button" aria-label="Удалить товар")
+      +icon("icon-trash", 34, 34)
+

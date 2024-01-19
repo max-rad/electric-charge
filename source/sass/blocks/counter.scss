@@ -1,0 +1,68 @@
+.counter {
+  display: flex;
+  align-items: center;
+  width: 138px;
+  padding: 5px 20px;
+
+  border-radius: 8px;
+  background-color: $color-white-smoke;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    &.disabled {
+      pointer-events: none;
+
+      svg {
+        color: $color-grey;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 24px;
+      height: 24px;
+
+      color: $color-nero;
+
+      transition: color $trans-default;
+    }
+
+    @include hover-focus {
+      svg {
+        color: $color-pumpkin
+      }
+    }
+
+    @include active {
+      svg {
+        color: $color-persimmon;
+      }
+    }
+  }
+
+  &__quantity {
+    input {
+      width: 50px;
+      padding: 0 10px;
+
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+
+      border: none;
+
+      background-color: $color-white-smoke;
+      color: $color-default-black;
+
+      outline: none;
+    }
+  }
+}

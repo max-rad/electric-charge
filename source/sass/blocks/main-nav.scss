@@ -277,7 +277,11 @@
     }
 
     @include hover-focus {
-      color: $color-burnt-orange;
+      color: $color-flamenco;
+    }
+
+    @include active {
+      color: $color-persimmon;
     }
   }
 
@@ -336,6 +340,7 @@
   }
 
   &__basket {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -357,9 +362,37 @@
 
     @include hover-focus {
       svg {
-        color: $color-burnt-orange;
+        color: $color-flamenco;
       }
     }
+
+    @include active {
+      svg {
+        color: $color-persimmon;
+      }
+    }
+  }
+
+  &__quantity {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    bottom: -7px;
+    left: -3px;
+
+    width: 18px;
+    height: 18px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    border-radius: 50%;
+    background-color: $color-default-white;
+    color: $color-nero;
   }
 
   &__socials {

@@ -12,28 +12,53 @@ mixin footer(footerMods)
       {
         href: "#",
         text: "Сервис"
-      }
+      },
+      {
+        href: "#",
+        text: "Доставка и&nbsp;оплата"
+      },
+      {
+        href: "#",
+        text: "Гарантия и&nbsp;возврат"
+      },
     ]
 
   footer.footer(class=footerMods)
+    .footer__background
+      img(src="img/svg/footer-background.svg", width="433" height="214" alt="")
     .container
       .footer__wrapper
-        .footer__socials
-          a.footer__logo(href="/" aria-label="Переход на главную")
-            img(src="img/svg/logo-footer.svg", width="210" height="85" alt="Логотип Электрический Заряд")
-          +socials()
+        a.footer__logo(href="/" aria-label="Переход на главную")
+          img(src="img/svg/logo.svg", width="210" height="85" alt="Логотип Электрический Заряд")
+        .footer__requisites
+          p.footer__label Реквизиты:
+          p.footer__text ООО &laquo;Электрический заряд&raquo;
+          p.footer__text ОГРН 1227800045329
+          p.footer__text ИНН 1227800045329
         .footer__contacts
           p.footer__label Контактная информация:
-          a.footer__address(href="#") Санкт-Петербург, Заневский проспект, 30к2
-          a.footer__email(href="mailto:Electriccharge.info@yandex.ru") Electriccharge.info@yandex.ru
-          a.footer__phone(href="tel:88124256427") 8 (812) 425-64-27
-        .footer__service
-          p.footer__label Услуги
-          ul.footer__list
-            each item in footerLinks
-              li.footer__item
-                a.footer__link(href=item.href)!=item.text
+          p.footer__address
+            +icon("icon-location", 24, 24)
+            | Санкт-Петербург, Заневский проспект, 30к2
+          a.footer__email(href="mailto:Electriccharge.info@yandex.ru")
+            +icon("icon-email", 24, 24)
+            | Electriccharge.info@yandex.ru
+          a.footer__phone(href="tel:88124256427")
+            +icon("icon-call", 24, 24)
+            | 8 (812) 425-64-27
+          +socials().socials--footer
+        ul.footer__list
+          each item in footerLinks
+            li.footer__item
+              a.footer__link(href=item.href)!=item.text
         .footer__info
           a.footer__offer(href="#") Публичная оферта
-          a.footer__policy(href="#") Политика персональных данных
+          a.footer__policy(href="#") Политика обработки персональных данных
+        .footer__payment
+          .footer__icon
+            +icon("icon-mir", 46, 13)
+          .footer__icon
+            +icon("icon-visa", 45, 14)
+          .footer__icon
+            +icon("icon-master-card", 49, 29)
 

@@ -1,0 +1,30 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Электрический заряд | Корзина"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "basket.html"
+
+block main
+    main
+      +inner-page({
+        breadcrumbs: [
+          {
+          href: "#",
+          text: "Главная страница"
+          },
+          {
+            href: "#",
+            text: "Моя корзина",
+            isActive: "true",
+          }
+        ],
+        title: "Моя корзина"
+      })
+        +basket()
+
+block modals

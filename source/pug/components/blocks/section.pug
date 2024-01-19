@@ -3,9 +3,10 @@ mixin section(data)
     .container
       .section__wrapper
         h2.title.title--h2.section__title!=data.title
-        if (data.description)
+        if (data.content)
           .section__content
-            each item in data.description
-              p!=item
+            if (data.content.description)
+              each item in data.content.description
+                p!=item
         if (block)
           block

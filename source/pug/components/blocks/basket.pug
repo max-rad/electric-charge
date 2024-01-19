@@ -1,0 +1,67 @@
+mixin basket()
+  -
+    const list = [
+      {
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "140",
+          height: "140",
+          alt: "Самокат"
+        },
+        title: "Электросамокат Ninebot KickScooter MAX G30RU",
+        oldPrice: "53&nbsp;000&nbsp;₽",
+        price: "41&nbsp;000&nbsp;₽",
+        quantity: "2",
+        totalPrice: "82&nbsp;000&nbsp;₽",
+      },
+      {
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "140",
+          height: "140",
+          alt: "Самокат"
+        },
+        title: "Электросамокат Ninebot KickScooter MAX G30RU",
+        oldPrice: "41&nbsp;000&nbsp;₽",
+        price: "33&nbsp;000&nbsp;₽",
+        quantity: "1",
+        totalPrice: "33&nbsp;000&nbsp;₽",
+      },
+      {
+        image: {
+          src: "image-3",
+          format: "webp",
+          width: "140",
+          height: "140",
+          alt: "Самокат"
+        },
+        title: "Электросамокат Ninebot KickScooter MAX G30RU",
+        price: "29&nbsp;000&nbsp;₽",
+        quantity: "1",
+        totalPrice: "29&nbsp;000&nbsp;₽",
+      }
+    ]
+
+  .basket
+    form(method="get")
+      .basket__wrapper
+        .basket__controls
+          .basket__select-all
+            label
+              input(type="checkbox" name="select-all" checked)
+              span.basket__icon
+                +icon("icon-check", 14, 14)
+              span.basket__label Выбрать все
+          button.btn-reset.basket__remove-all(type="button") Удалить выбранные
+        .basket__total
+          .basket__total-price
+            p.basket__text Итого:
+            p.basket__price 156&nbsp;000&nbsp;₽
+          +btn({type: "submit", text: "Оформить заказ"}).btn--orange.basket__button
+        p.basket__total-quantity В&nbsp;корзине <span>3</span>&nbsp;товара
+        ul.list-reset.basket__list
+          each item in list
+            li.basket__item
+              +basket-card(item)

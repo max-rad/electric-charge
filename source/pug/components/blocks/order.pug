@@ -1,0 +1,54 @@
+mixin order()
+  -
+    const list = [
+      {
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "140px",
+          height: "140px",
+          alt: "Самокат"
+        },
+        title: "Электросамокат Ninebot KickScooter MAX G30RU",
+        quantity: "2&nbsp;шт",
+        price: "82&nbsp;000&nbsp;₽"
+      },
+      {
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "140px",
+          height: "140px",
+          alt: "Самокат"
+        },
+        title: "Электросамокат Ninebot KickScooter MAX G30RU",
+        quantity: "1&nbsp;шт",
+        price: "33&nbsp;000&nbsp;₽"
+      },
+      {
+        image: {
+          src: "image-3",
+          format: "webp",
+          width: "140px",
+          height: "140px",
+          alt: "Самокат"
+        },
+        title: "Электросамокат Ninebot KickScooter MAX G30RU",
+        quantity: "1&nbsp;шт",
+        price: "41&nbsp;000&nbsp;₽"
+      }
+    ]
+
+  .order
+    .order__main
+      .order__block
+        h2.order__title Товары в&nbsp;заказе
+        ul.list-reset.order__list
+          each item in list
+            li.order__item
+              +order-card(item)
+        .order__controls
+          +btn({type: "button", text: "Назад"}).btn--border-orange.order__return
+          +btn({type: "button", text: "Далее"}).btn--orange.order__next
+    .order__aside
+      +order-total().order__total

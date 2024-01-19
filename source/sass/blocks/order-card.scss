@@ -1,0 +1,52 @@
+.order-card {
+  display: flex;
+  justify-content: space-between;
+
+  &__link {
+    display: flex;
+    margin: 0 20px 0 0;
+  }
+
+  &__image {
+    width: 140px;
+    height: 140px;
+    margin: 0 20px 0 0;
+
+    img {
+      width: 140px;
+      height: 140px;
+
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-black;
+  }
+
+  &__quantity {
+    margin: 0 20px 0;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: $color-default-black;
+  }
+
+  &__price {
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: $color-default-black;
+  }
+}
