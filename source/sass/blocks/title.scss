@@ -35,5 +35,10 @@
       font-size: 32px;
       line-height: 45px;
     }
+
+    @include vp-389 {
+      font-size: 28px;
+      line-height: 38px;
+    }
   }
 }

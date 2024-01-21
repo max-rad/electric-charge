@@ -197,6 +197,11 @@
       line-height: 30px;
     }
 
+    @include vp-389 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
     svg {
       flex-shrink: 0;
 
@@ -230,6 +235,11 @@
 
     @include vp-767 {
       margin: 0 0 20px;
+    }
+
+    @include vp-389 {
+      font-size: 16px;
+      line-height: 24px;
     }
 
     svg {
@@ -273,6 +283,11 @@
 
     @include vp-767 {
       margin: 0 0 30px;
+    }
+
+    @include vp-389 {
+      font-size: 16px;
+      line-height: 24px;
     }
 
     svg {

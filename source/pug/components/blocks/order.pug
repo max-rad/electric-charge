@@ -40,15 +40,89 @@ mixin order()
     ]
 
   .order
-    .order__main
-      .order__block
-        h2.order__title Товары в&nbsp;заказе
-        ul.list-reset.order__list
-          each item in list
-            li.order__item
-              +order-card(item)
-        .order__controls
-          +btn({type: "button", text: "Назад"}).btn--border-orange.order__return
-          +btn({type: "button", text: "Далее"}).btn--orange.order__next
-    .order__aside
-      +order-total().order__total
+    form(method="post")
+      .order__wrapper
+        .order__main
+          .order__block.is-success
+            button.btn-reset.order__change(type="button") Изменить
+            h2.order__title
+              span.order__icon
+                +icon("icon-check-circle-green", 16, 16)
+              | Товары в&nbsp;заказе
+            ul.list-reset.order__list
+              each item in list
+                li.order__item
+                  +order-card(item)
+            .order__controls
+              +btn({type: "button", text: "Далее"}).btn--orange.order__next
+          .order__block
+            button.btn-reset.order__change(type="button") Изменить
+            h2.order__title
+              span.order__icon
+                +icon("icon-check-circle-green", 16, 16)
+              | Регион доставки
+            .order__info
+              .order__payer
+                p.order__label Тип плательщика:
+                p.order__text Физическое лицо
+              .order__location
+                p.order__label Местоположение:
+                p.order__text Санкт-Петербург, Северо-Запад, Россия
+            .order__content
+              +order-region()
+              .order__controls
+                +btn({type: "button", text: "Назад"}).btn--border-orange.order__return
+                +btn({type: "button", text: "Далее"}).btn--orange.order__next
+          .order__block
+            button.btn-reset.order__change(type="button") Изменить
+            h2.order__title
+              span.order__icon
+                +icon("icon-check-circle-green", 16, 16)
+              | Доставка
+            .order__info
+              .order__delivery
+                p.order__delivery-type
+                  +icon("icon-box", 24, 24)
+                  | Доставка курьером
+                p.order__text.order__text--bold Доставка курьером
+            .order__content
+              +order-delivery()
+              .order__controls
+                +btn({type: "button", text: "Назад"}).btn--border-orange.order__return
+                +btn({type: "button", text: "Далее"}).btn--orange.order__next
+          .order__block
+            button.btn-reset.order__change(type="button") Изменить
+            h2.order__title
+              span.order__icon
+                +icon("icon-check-circle-green", 16, 16)
+              | Оплата
+            .order__info
+              .order__payment
+                p.order__payment-type
+                  +icon("icon-wallet", 24, 24)
+                  | Наличными курьеру
+            .order__content
+              +order-payment()
+              .order__controls
+                +btn({type: "button", text: "Назад"}).btn--border-orange.order__return
+                +btn({type: "button", text: "Далее"}).btn--orange.order__next
+          .order__block
+            button.btn-reset.order__change(type="button") Изменить
+            h2.order__title
+              span.order__icon
+                +icon("icon-check-circle-green", 16, 16)
+              | Покупатель
+            .order__content
+              +order-payer()
+              .order__controls
+                +btn({type: "button", text: "Назад"}).btn--border-orange.order__return
+                +btn({type: "button", text: "Далее"}).btn--orange.order__next
+        .order__confirm
+          +custom-checkbox({
+            label: "Нажимая кнопку &laquo;Оформить заказ&raquo;, я&nbsp;даю своё согласие на&nbsp;обработку моих персональных данных, в&nbsp;соответствии с&nbsp;Федеральным законом от&nbsp;27.07.2006 года &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo;, на&nbsp;условиях и&nbsp;для целей, определённых в&nbsp;Согласии на&nbsp;обработку персональных данных",
+            name: "agreement",
+            checked: "true"
+          }).order__checkbox
+          +btn({href: "#", text: "Оформить заказ"}).btn--orange.order__button
+        .order__aside
+          +order-total().order__total

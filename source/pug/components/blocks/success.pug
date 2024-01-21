@@ -1,0 +1,9 @@
+mixin success()
+  .success
+    p.success__description Ваш заказ <span>№6</span> от 06.12.2023 10:11 успешно создан. Номер вашей оплаты: <span>№6/1</span>
+    p.success__price Сумма заказа: <span>156&nbsp;500&nbsp;₽</span>
+    p.success__title Оплата заказа
+    p.success__payment
+      +icon("icon-wallet", 32, 32)
+      | Наличными курьеру
+    +btn({href: "#", text: "Перейти на&nbsp;главную"}).btn--orange.success__button

@@ -1,5 +1,8 @@
 mixin section(data)
-  section.section
+  section.section&attributes(attributes)
+    if (data.background)
+      .section__background(class=data.background.mods)
+        img(src="img/svg/background.svg" width="500" height="500")
     .container
       .section__wrapper
         h2.title.title--h2.section__title!=data.title
@@ -8,5 +11,16 @@ mixin section(data)
             if (data.content.description)
               each item in data.content.description
                 p!=item
+            if (data.content.orderedList)
+              ol
+                each item in data.content.orderedList
+                  li!=item
+            if (data.content.unorderedList)
+              ul
+                each item in data.content.unorderedList
+                  li!=item
+        if (data.image)
+          .section__image
+            +img("content/section", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
         if (block)
           block

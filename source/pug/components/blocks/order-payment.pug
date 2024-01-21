@@ -1,0 +1,33 @@
+mixin order-payment()
+  .order-payment
+    .order-payment__form
+      .order-payment__checkbox
+        .order-payment__checkbox-wrapper
+          label
+            input(type="checkbox" name="courier")
+            span.order-payment__icon
+              +icon("icon-check", 14, 14)
+            span.order-payment__label
+              +icon("icon-wallet", 64, 64)
+        p.order-payment__text Наличными курьеру
+      .order-payment__checkbox
+        .order-payment__checkbox-wrapper
+          label
+            input(type="checkbox" name="card")
+            span.order-payment__icon
+              +icon("icon-check", 14, 14)
+            span.order-payment__label
+              +icon("icon-card", 64, 64)
+        p.order-payment__text Банковской картой
+      .order-payment__checkbox
+        .order-payment__checkbox-wrapper
+          label
+            input(type="checkbox" name="cash")
+            span.order-payment__icon
+              +icon("icon-check", 14, 14)
+            span.order-payment__label
+              +icon("icon-convert-card", 64, 64)
+        p.order-payment__text Безналичный расчет
+    .order-payment__total
+      p.order-payment__title Наличными курьеру
+      p.order-payment__description Оплата производится наличными деньгами, в&nbsp;момент получения заказа. Подтверждением вашей оплаты является фискальный кассовый чек, вручаемый во&nbsp;время получения и&nbsp;оплаты заказа.

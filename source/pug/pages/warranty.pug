@@ -1,0 +1,48 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Электрический заряд | Гарантия и возврат"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "warranty.html"
+
+block main
+    main
+      +intro({
+        background: {
+          src: "background-4",
+          format: "webp",
+          width: "1920",
+          height: "272",
+          alt: "background"
+        },
+        breadcrumbs: [
+          {
+          href: "#",
+          text: "Главная страница"
+          },
+          {
+            href: "#",
+            text: "Гарантия и&nbsp;возврат",
+            isActive: "true",
+          }
+        ],
+        title: "Гарантия и&nbsp;возврат"
+      }).intro--inner-page
+      +section({
+        title: "Гарантии качества",
+        content: {
+          description: [
+            "Наш магазин электротранспорта является официальным дилером, что позволяет нам оперативно и&nbsp;качественно осуществлять гарантийные обязательства в&nbsp;сервисном центре.",
+            "Любой продаваемый нами товар имеет фирменную гарантию производителя или официального дистрибьютора, по&nbsp;которой в&nbsp;течение гарантийного срока вам предоставляется бесплатный гарантийный ремонт в&nbsp;сервисных центрах производителя.",
+            "Срок гарантии на&nbsp;представленный электротранспорт&nbsp;&mdash; от&nbsp;12-ти до&nbsp;36-х месяцев (в&nbsp;зависимости от&nbsp;производителя или дистрибьютора).",
+            "На&nbsp;контроллеры и&nbsp;аккумуляторные литиевые батареи, входящие в&nbsp;состав всего электротранспорта, гарантия составляет от&nbsp;3-х до&nbsp;6-ти месяцев, на&nbsp;свинцово-кислотные от&nbsp;1-го до&nbsp;3-х месяцев в&nbsp;зависимости от&nbsp;производителя или дистрибьютора."
+          ]
+        }
+      })
+      +watched()
+
+block modals

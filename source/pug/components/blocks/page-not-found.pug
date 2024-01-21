@@ -1,0 +1,10 @@
+mixin page-not-found()
+  section.page-not-found
+    .container
+      .page-not-found__wrapper
+        .page-not-found__image
+          img(src="img/svg/404.svg", width="679" height="350" alt="404")
+        .page-not-found__content
+          h1.page-not-found__title Страница не&nbsp;найдена
+          p.page-not-found__description Похоже, мы&nbsp;не&nbsp;можем найти нужную вам страницу
+          +btn({href: "#", text: "Вернуться на главную"}).btn--orange.page-not-found__button

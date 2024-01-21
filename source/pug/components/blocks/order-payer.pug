@@ -1,0 +1,28 @@
+mixin order-payer()
+  .order-payer
+    +custom-input({
+      label: "Ф.И.О.",
+      type: "text",
+      name: "name",
+      required: "true"
+    }).custom-input--required.order-payer__input
+    +custom-input({
+      label: "Номер телефона",
+      type: "tel",
+      name: "phone",
+      required: "true"
+    }).custom-input--required.order-payer__input
+    +custom-input({
+      label: "E-mail",
+      type: "email",
+      name: "email"
+    }).order-payer__input
+    +custom-input({
+      label: "Адрес доставки",
+      type: "text",
+      name: "address"
+    }).order-payer__input
+    +custom-textarea({
+      label: "Комментарии к заказу",
+      name: "comment"
+    }).order-payer__textarea

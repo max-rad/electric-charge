@@ -1,0 +1,115 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Электрический заряд | О компании"
+    - const wrapperMods = "wrapper--overflow"
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "about.html"
+
+block main
+    main
+      +intro({
+        background: {
+          src: "background-1",
+          format: "webp",
+          width: "1920",
+          height: "272",
+          alt: "background"
+        },
+        breadcrumbs: [
+          {
+          href: "#",
+          text: "Главная страница"
+          },
+          {
+            href: "#",
+            text: "О&nbsp;компании",
+            isActive: "true",
+          }
+        ],
+        title: "О&nbsp;компании"
+      }).intro--inner-page
+      +section({
+        background: {
+          mods: "section__background--left"
+        },
+        title: "Миссия бренда",
+        content: {
+          description: [
+            "Улучшать качество жизни людей, создавая комфорт в&nbsp;передвижении при помощи современных технологий и&nbsp;одновременно заботясь об&nbsp;окружающей среде."
+          ]
+        },
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "1400",
+          height: "345",
+          alt: "Логотип Электрический Заряд"
+        }
+      })
+      +section({
+        background: {
+          mods: "section__background--right"
+        },
+        title: "Ценность бренда. Позиционирование",
+        content: {
+          description: [
+            "Технологичность: нам важно ежедневно развиваться и&nbsp;идти в&nbsp;ногу со&nbsp;временем. Уверены, что вам тоже.",
+            "Эффективность: все, что мы&nbsp;создаём, мы&nbsp;создаём для получения максимальных результатов и&nbsp;вашего удовольствия.",
+            "Скорость: современная жизнь очень быстротечна. Нам важно все успевать и&nbsp;сохранять при этом привычное качество жизни. Мы&nbsp;знаем, что и&nbsp;вам это важно.",
+            "Доступность: мы&nbsp;сделали наши продукты доступными, потому как для нас важно, чтобы каждый житель нашей страны имел возможность больше успевать, быть эффективнее, иметь лучшее качество жизни и&nbsp;комфорта.",
+            "Позиционирование: транспорт нового времени"
+          ]
+        },
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "680",
+          height: "600",
+          alt: "Логотип Электрический Заряд"
+        }
+      }).section--columns
+      +section({
+        background: {
+          mods: "section__background--left section__background--up"
+        },
+        title: "Характер бренда",
+        content: {
+          description: [
+            "&laquo;Электрический Заряд&raquo;&nbsp;&mdash; супер быстрый, амбициозный и&nbsp;честный бренд. Мы&nbsp;идем в&nbsp;ногу со&nbsp;временем и&nbsp;говорим на&nbsp;одном языке с&nbsp;быстро развивающимся миром"
+          ]
+        },
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "680",
+          height: "600",
+          alt: "Логотип Электрический Заряд"
+        }
+      }).section--columns.section--direction
+      +section({
+        background: {
+          mods: "section__background--right section__background--down"
+        },
+        title: "О&nbsp;нас",
+        content: {
+          description: [
+            "&laquo;Электрический Заряд&raquo;&nbsp;&mdash; это мультибрендовый магазин, для тех кто ищет экологически чистые и&nbsp;эффективные виды транспорта.",
+            "В&nbsp;магазине представлен широкий ассортимент Экотранспорта: Электровелосипеды, Электросамокаты, Электромотоциклы, Сигвеи, Моноколеса",
+            "&laquo;Электрический Заряд&raquo; сотрудничает с&nbsp;надежными производителями, чтобы гарантировать высокое качество и&nbsp;производительность каждого продукта, представленного в&nbsp;магазине."
+          ]
+        },
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "1400",
+          height: "345",
+          alt: "Логотип Электрический Заряд"
+        }
+      })
+      +watched()
+
+block modals

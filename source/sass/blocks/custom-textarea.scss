@@ -9,22 +9,23 @@
 
   textarea {
     height: 100%;
-    padding: 16px 20px 15px;
+    padding: 16px 20px;
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
 
     border: none;
     border-radius: 12px;
+    background-color: $color-white-smoke-2;
     color: $color-default-black;
 
     outline: none;
 
     &::placeholder {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 22px;
 
       color: rgba($color-default-black, 0.5);
     }
@@ -32,10 +33,10 @@
 
   &__label {
     display: block;
-    margin: 0 0 4px;
+    margin: 0 0 10px;
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
   }
 }

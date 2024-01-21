@@ -1,0 +1,30 @@
+mixin order-delivery()
+  .order-delivery
+    .order-delivery__form
+      .order-delivery__checkbox
+        .order-delivery__checkbox-wrapper
+          label
+            input(type="checkbox" name="delivery")
+            span.order-delivery__icon
+              +icon("icon-check", 14, 14)
+            span.order-delivery__label
+              +icon("icon-box", 48, 48)
+              | Доставка СДЭК
+            span.order-delivery__price 500&nbsp;₽
+        p.order-delivery__text Доставка курьером
+      .order-delivery__checkbox
+        .order-delivery__checkbox-wrapper
+          label
+            input(type="checkbox" name="pickup")
+            span.order-delivery__icon
+              +icon("icon-check", 14, 14)
+            span.order-delivery__label
+              +icon("icon-truck", 48, 48)
+              | Самовывоз
+        p.order-delivery__text Самовывоз
+    .order-delivery__total
+      p.order-delivery__title Доставка курьером
+      p.order-delivery__description Доставка осуществляется в&nbsp;течение дня в&nbsp;удобное для вас время.
+      p.order-delivery__text.order-delivery__text--bold Стоимость:
+      p.order-delivery__total-price 500&nbsp;₽
+

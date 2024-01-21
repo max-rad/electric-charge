@@ -46,7 +46,8 @@ export class Filter {
   }
 
   _onDocumentClick(evt) {
-    if (evt.target.hasAttribute('[data-filter-close]')) {
+    console.log(evt.target);
+    if (evt.target.closest('[data-filter-close]')) {
       this._closeMenu();
     }
   }

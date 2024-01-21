@@ -1,0 +1,76 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Электрический заряд | Доставка и оплата"
+    - const wrapperMods = "wrapper--overflow"
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "delivery.html"
+
+block main
+    main
+      +intro({
+        background: {
+          src: "background-3",
+          format: "webp",
+          width: "1920",
+          height: "272",
+          alt: "background"
+        },
+        breadcrumbs: [
+          {
+          href: "#",
+          text: "Главная страница"
+          },
+          {
+            href: "#",
+            text: "Доставка и&nbsp;оплата",
+            isActive: "true",
+          }
+        ],
+        title: "Доставка и&nbsp;оплата"
+      }).intro--inner-page
+      +section({
+        background: {
+          mods: "section__background--left"
+        },
+        title: "Доставка по&nbsp;Санкт-Петербургу и&nbsp;Ленинградской области"
+      })
+        +delivery()
+      +section({
+        background: {
+          mods: "section__background--right section__background--top-50"
+        },
+        title: "Доставка по&nbsp;России",
+        content: {
+          description: [
+            "Доставка по&nbsp;всей России осуществляется транспортной компанией CDEK, имеющей терминал в&nbsp;вашем городе. Доставка возможна как до&nbsp;двери вашего дома, так и&nbsp;до&nbsp;пункта выдачи товаров.",
+            "Стоимость доставки рассчитывается согласно калькулятору на&nbsp;сайте и&nbsp;оплачивается дополнительно.",
+            "При приёмке товара важно вскрыть коробку и&nbsp;проверить товар на&nbsp;терминале&nbsp;ТК до&nbsp;подписания накладных о&nbsp;получении. Весь товар при отправке страхуется."
+          ]
+        },
+        image: {
+          src: "map-russia",
+          format: "webp",
+          width: "680",
+          height: "387",
+          alt: "Карта России"
+        }
+      }).section--columns
+      +section({
+        background: {
+          mods: "section__background--right section__background--down section__background--bottom-370"
+        },
+        title: "Платите&nbsp;&mdash; как удобно",
+        content: {
+          description: [
+            "Оплата заказов на&nbsp;сайте производится с&nbsp;использованием сервиса &quot;ВТБ банкт&quot;,&quot;Тинькофф банк&quot; , который позволяет совершать платежи следующими способами:"
+          ]
+        }
+      })
+        +payment()
+      +watched()
+
+block modals

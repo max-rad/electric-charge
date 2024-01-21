@@ -1,0 +1,41 @@
+mixin payment()
+  -
+    const list = [
+      {
+        icon: {
+          name: "icon-wallet",
+          width: "64",
+          height: "64"
+        },
+        title: "Наличными курьеру",
+        description: "Оплата заказа наличными,при получении товара"
+      },
+      {
+        icon: {
+          name: "icon-card",
+          width: "64",
+          height: "64"
+        },
+        title: "Картой онлайн",
+        description: "Оплата заказа банковской картой VISA, MasterCard, МИР на&nbsp;сайте"
+      },
+      {
+        icon: {
+          name: "icon-convert-card",
+          width: "64",
+          height: "64"
+        },
+        title: "Банковский перевод",
+        description: "После оформления заказа менеджер магазина выставит счет"
+      }
+    ]
+
+  .payment
+    ul.list-reset.payment__list
+      each item in list
+        li.payment__item
+          span.payment__icon
+            +icon(item.icon.name, item.icon.width, item.icon.height)
+          h3.payment__title!=item.title
+          p.payment__description!=item.description
+    p.payment__text Более подробную информацию об&nbsp;условиях, сроках и&nbsp;стоимости доставки вы&nbsp;можете узнать у&nbsp;менеджера по&nbsp;тел.&nbsp;8 (812) 425-64-27

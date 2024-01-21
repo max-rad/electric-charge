@@ -3,7 +3,6 @@
 
   label {
     display: inline-flex;
-    align-items: center;
 
     cursor: pointer;
     user-select: none;
@@ -66,10 +65,5 @@
     color: $color-default-black;
 
     user-select: none;
-
-    @include vp-767 {
-      font-size: 22px;
-      line-height: 33px;
-    }
   }
 }

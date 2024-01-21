@@ -1,0 +1,26 @@
+mixin feedback()
+  .feedback
+    form(method="post")
+      .feedback__wrapper
+        h2.feedback__title Хотите узнать больше?
+        p.feedback__description Оставьте заявку, мы&nbsp;сами с&nbsp;вами свяжемся
+        +custom-input({
+          label: "Ваше имя",
+          type: "text",
+          name: "name",
+          placeholder: "Введите имя"
+        }).feedback__input
+        +custom-input({
+          label: "Ваш номер телефона",
+          type: "tel",
+          name: "phone",
+          placeholder: "Введите номер телефона"
+        }).feedback__input
+        +custom-textarea({
+          label: "Ваш вопрос",
+          name: "comment",
+          placeholder: "Напишите сообщение"
+        }).feedback__textarea
+        +btn({type: "submit", text: "Отправить заявку"}).btn--orange.feedback__button
+        p.feedback__agreement Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
+          a(href="#") политикой обработки персональных данных

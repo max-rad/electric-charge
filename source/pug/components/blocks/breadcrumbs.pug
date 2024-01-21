@@ -1,5 +1,5 @@
 mixin breadcrumbs(list)
-  .breadcrumbs
+  .breadcrumbs&attributes(attributes)
     ul.list-reset.breadcrumbs__list
       each item in list
         li.breadcrumbs__item

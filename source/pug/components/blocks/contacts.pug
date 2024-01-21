@@ -1,0 +1,32 @@
+mixin contacts()
+  .contacts
+    .contacts__info
+      .contacts__map
+        +img("content", "map", "webp", "720", "260", "Карта")
+      ul.list-reset.contacts__list
+        li.contacts__item
+          p.contacts__label
+            +icon("icon-location", 24, 24)
+            | Адрес:
+          .contacts__content
+            p.contacts__text Санкт-Петербург, Заневский проспект, 30к2
+        li.contacts__item
+          p.contacts__label
+            +icon("icon-clock", 24, 24)
+            | Режим работы:
+          .contacts__content
+            p.contacts__text Пн-Пт с&nbsp;10:00 до&nbsp;19:00
+        li.contacts__item
+          p.contacts__label
+            +icon("icon-email", 24, 24)
+            | Почта:
+          .contacts__content
+            a.contacts__link(href="mailto:Electriccharge.info@yandex.ru") Electriccharge.info@yandex.ru
+        li.contacts__item
+          p.contacts__label
+            +icon("icon-call", 24, 24)
+            | Телефон:
+          .contacts__content
+            a.contacts__link(href="tel:88124256427") 8 (812) 425-64-27
+            a.contacts__link(href="tel:+79216332072") +7 (921) 633-20-72
+    +feedback()

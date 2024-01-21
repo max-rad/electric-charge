@@ -1,0 +1,22 @@
+mixin order-region()
+  .order-region
+    p.order-region__label Тип плательщика:
+    +custom-checkbox({
+      label: "Физическое лицо",
+      name: "individual",
+      checked: "true"
+    }).order-region__checkbox
+    +custom-input({
+      label: "Ваше местоположение",
+      type: "text",
+      name: "location",
+      placeholder: "Введите название города",
+      required: "true"
+    }).custom-input--required.custom-input--small.order-region__input
+    +custom-input({
+      label: "Индекс",
+      type: "text",
+      name: "index",
+      placeholder: "Введите почтовый индекс"
+    }).custom-input--small.order-region__input
+    p.order-region__text Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"

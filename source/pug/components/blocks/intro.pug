@@ -1,4 +1,4 @@
-mixin intro()
+mixin intro(data)
   -
     const list = [
       {
@@ -43,32 +43,44 @@ mixin intro()
       }
     ]
 
-  section.intro
-    .intro__wrapper
-      .intro__slider.swiper(data-slider="intro")
-        .intro__slides.swiper-wrapper
-          each item in list
-            .intro__slide.swiper-slide
-              a.intro__link(href=item.href)
-                .container
-                  .intro__image
-                    picture
-                      source(media="(max-width: 767px)" srcset="img/content/intro/" + item.image.src + "-mobile" + "." + item.image.format + ", " + "img/content/intro/" + item.image.src + "-mobile" + "@2x." + item.image.format)
-                      source(media="(max-width: 1023px)" srcset="img/content/intro/" + item.image.src + "-tablet" + "." + item.image.format + ", " + "img/content/intro/" + item.image.src + "-tablet" + "@2x." + item.image.format)
-                      img(src="img/content/intro/" + item.image.src + "." + item.image.format srcset="img/content/intro/" + item.image.src + "@2x." + item.image.format width=item.image.width height=item.image.height alt=item.image.alt)
-                  .intro__info
-                    h1.title.title--h1.intro__title Интернет-магазин электротранспорта
-                    h1.title.title--h1.intro__title.intro__title--mobile Магазин электро транспорта
-                    +btn({type: "button", text: "Перейти в&nbsp;каталог"}).btn--big.btn--orange.intro__button
-                    +btn({type: "button", text: "Каталог"}).btn--big.btn--orange.intro__button.intro__button--mobile
-                    ul.list-reset.intro__list
-                      li.intro__item
-                        +icon("icon-check-circle", 32, 32)
-                        p.intro__text Мощные литиевые батареи
-                      li.intro__item
-                        +icon("icon-check-circle", 32, 32)
-                        p.intro__text Быстрая и&nbsp;удобная доставка
-                      li.intro__item
-                        +icon("icon-check-circle", 32, 32)
-                        p.intro__text 100% оригинальная продукция
-        .swiper-pagination
+  section.intro&attributes(attributes)
+    if (currentUrl === "index.html")
+      .intro__wrapper
+        .intro__slider.swiper(data-slider="intro")
+          .intro__slides.swiper-wrapper
+            each item in list
+              .intro__slide.swiper-slide
+                a.intro__link(href=item.href)
+                  .container
+                    .intro__image
+                      picture
+                        source(media="(max-width: 767px)" srcset="img/content/intro/" + item.image.src + "-mobile" + "." + item.image.format + ", " + "img/content/intro/" + item.image.src + "-mobile" + "@2x." + item.image.format)
+                        source(media="(max-width: 1023px)" srcset="img/content/intro/" + item.image.src + "-tablet" + "." + item.image.format + ", " + "img/content/intro/" + item.image.src + "-tablet" + "@2x." + item.image.format)
+                        img(src="img/content/intro/" + item.image.src + "." + item.image.format srcset="img/content/intro/" + item.image.src + "@2x." + item.image.format width=item.image.width height=item.image.height alt=item.image.alt)
+                    .intro__info
+                      h1.title.title--h1.intro__title Интернет-магазин электротранспорта
+                      h1.title.title--h1.intro__title.intro__title--mobile Магазин электро транспорта
+                      +btn({type: "button", text: "Перейти в&nbsp;каталог"}).btn--big.btn--orange.intro__button
+                      +btn({type: "button", text: "Каталог"}).btn--big.btn--orange.intro__button.intro__button--mobile
+                      ul.list-reset.intro__list
+                        li.intro__item
+                          +icon("icon-check-circle", 32, 32)
+                          p.intro__text Мощные литиевые батареи
+                        li.intro__item
+                          +icon("icon-check-circle", 32, 32)
+                          p.intro__text Быстрая и&nbsp;удобная доставка
+                        li.intro__item
+                          +icon("icon-check-circle", 32, 32)
+                          p.intro__text 100% оригинальная продукция
+          .swiper-pagination
+    else
+      if (data.background)
+        .intro__background
+          picture
+            source(media="(max-width: 767px)" srcset="img/content/intro/" + data.background.src + "-mobile" + "." + data.background.format + ", " + "img/content/intro/" + data.background.src + "-mobile" + "@2x." + data.background.format)
+            source(media="(max-width: 1023px)" srcset="img/content/intro/" + data.background.src + "-tablet" + "." + data.background.format + ", " + "img/content/intro/" + data.background.src + "-tablet" + "@2x." + data.background.format)
+            img(src="img/content/intro/" + data.background.src + "." + data.background.format srcset="img/content/intro/" + data.background.src + "@2x." + data.background.format width=data.background.width height=data.background.height alt=data.background.alt)
+      .container
+        .intro__wrapper
+          +breadcrumbs(data.breadcrumbs).intro__breadcrumbs
+          h1.title.title--h1!=data.title
