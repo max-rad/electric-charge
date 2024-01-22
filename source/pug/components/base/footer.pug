@@ -32,9 +32,10 @@ mixin footer(footerMods)
           img(src="img/svg/logo.svg", width="210" height="85" alt="Логотип Электрический Заряд")
         .footer__requisites
           p.footer__label Реквизиты:
-          p.footer__text ООО &laquo;Электрический заряд&raquo;
-          p.footer__text ОГРН 1227800045329
-          p.footer__text ИНН 1227800045329
+          .footer__text-wrapper
+            p.footer__text ООО &laquo;Электрический заряд&raquo;
+            p.footer__text ОГРН 1227800045329
+            p.footer__text ИНН 1227800045329
         .footer__contacts
           p.footer__label Контактная информация:
           p.footer__address

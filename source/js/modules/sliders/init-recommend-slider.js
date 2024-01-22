@@ -14,6 +14,10 @@ const initRecommendSlider = () => {
     slidesPerView: 1,
     spaceBetween: 20,
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
       767: {
         slidesPerView: 2,
         spaceBetween: 40,
@@ -28,7 +32,7 @@ const initRecommendSlider = () => {
       },
       1439: {
         slidesPerView: 4,
-        spaceBetween: 41,
+        spaceBetween: 40,
       },
     },
     navigation: {
