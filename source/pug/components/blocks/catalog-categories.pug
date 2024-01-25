@@ -10,7 +10,8 @@ mixin catalog-categories(elements)
             .catalog-categories__sub-accordion(data-accordion="parent")
               each element in elements
                 .catalog-categories__sub-element(data-accordion="element")
-                  button.btn-reset.catalog-categories__sub-button(type="button" data-accordion="button")!=element.button
+                  .catalog-categories__sub-button(data-accordion="button")
+                    a(href="#" data-accordion="link")!=element.button
                     +icon("icon-chevron-down", 24, 24)
                   .catalog-categories__sub-content(data-accordion="content")
                     .catalog-categories__content-wrapper

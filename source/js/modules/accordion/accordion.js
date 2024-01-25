@@ -14,23 +14,30 @@ export class Accordion {
 
   _documentClickHandler(evt) {
     const target = evt.target;
-    if (!target.closest('[data-accordion="button"]')) {
-      return;
-    }
+    if (target.closest('[data-accordion="link"]')) {
+      const link = target.closest('[data-accordion="link"]').href;
+      window.location.href = link;
+    } else if (target.closest('[data-accordion="button"]')) {
+      evt.preventDefault();
+      const parent = target.closest('[data-accordion="parent"]');
 
-    evt.preventDefault();
-    const parent = target.closest('[data-accordion="parent"]');
+      if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
+        return;
+      }
 
-    if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
-      return;
-    }
+      const element = target.closest('[data-accordion="element"]');
+      if (element.classList.contains('is-active')) {
+        this.closeAccordion(element);
+        return;
+      }
 
-    const element = target.closest('[data-accordion="element"]');
-    if (element.classList.contains('is-active')) {
-      this.closeAccordion(element);
-      return;
+      if (target.closest('[data-accordion="link"]')) {
+        const link = target.closest('[data-accordion="link"]').href;
+        window.location.href = link;
+      } else {
+        this.openAccordion(element);
+      }
     }
-    this.openAccordion(element);
   }
 
   _windowResizeHandler() {

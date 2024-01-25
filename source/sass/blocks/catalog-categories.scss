@@ -29,6 +29,7 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 34px;
+    text-align: left;
 
     color: $color-default-black;
 
@@ -117,6 +118,7 @@
   }
 
   &__sub-button {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,8 +131,6 @@
 
     color: $color-nero;
 
-    transition: color $trans-default;
-
     cursor: pointer;
     user-select: none;
 
@@ -141,8 +141,24 @@
       line-height: 22px;
     }
 
+    a {
+      z-index: 1;
+      position: relative;
+
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+
+      color: $color-nero;
+
+      transition: color $trans-default;
+    }
+
     svg {
       flex-shrink: 0;
+
+      z-index: 1;
+      position: relative;
 
       width: 24px;
       height: 24px;
@@ -162,7 +178,9 @@
     }
 
     @include hover-focus {
-      color: $color-pumpkin;
+      a {
+        color: $color-pumpkin;
+      }
 
       svg {
         color: $color-pumpkin;
@@ -170,7 +188,9 @@
     }
 
     @include active {
-      color: $color-persimmon;
+      a {
+        color: $color-persimmon;
+      }
 
       svg {
         color: $color-persimmon;

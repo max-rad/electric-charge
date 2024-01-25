@@ -11,7 +11,7 @@ const initCategoriesSlider = () => {
   const controlNext = controls.querySelector('[data-button-next]');
 
   const swiper = new Swiper(slider, {
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 20,
     breakpoints: {
       320: {
