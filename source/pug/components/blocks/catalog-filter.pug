@@ -22,3 +22,6 @@ mixin catalog-filter(elements)
                               label: item.label,
                               name: item.name
                             }).catalog-filter__checkbox
+            .catalog-filter__buttons-wrapper
+              +btn({type: "button", text: "Показать"}).btn--orange.catalog-filter__show
+              +btn({type: "button", text: "Сбросить"}).catalog-filter__reset

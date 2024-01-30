@@ -93,5 +93,9 @@
         color: $color-grey;
       }
     }
+
+    &.swiper-button-lock {
+      display: none;
+    }
   }
 }

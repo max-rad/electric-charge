@@ -1,14 +1,4 @@
-.feedback {
-  padding: 40px;
-
-  border-radius: 8px;
-  background-color: $color-default-white;
-  box-shadow: 0 0 6px 0 rgba($color-pink-swan, 0.6);
-
-  @include vp-767 {
-    padding: 40px 20px;
-  }
-
+.request {
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -35,11 +25,6 @@
   }
 
   &__input {
-    margin: 0 0 24px;
-  }
-
-  &__textarea {
-    height: 130px;
     margin: 0 0 24px;
   }
 

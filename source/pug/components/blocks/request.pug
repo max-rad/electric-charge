@@ -1,0 +1,21 @@
+mixin request()
+  .request
+    form(method="post")
+      .request__wrapper
+        h2.request__title Хотите узнать больше?
+        p.request__description Оставьте заявку, мы&nbsp;сами с&nbsp;вами свяжемся
+        +custom-input({
+          label: "Ваше имя",
+          type: "text",
+          name: "name",
+          placeholder: "Введите имя"
+        }).request__input
+        +custom-input({
+          label: "Ваш номер телефона",
+          type: "tel",
+          name: "phone",
+          placeholder: "Введите номер телефона"
+        }).request__input
+        +btn({type: "submit", text: "Отправить заявку"}).btn--orange.request__button
+        p.request__agreement Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
+          a(href="#") политикой обработки персональных данных

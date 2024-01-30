@@ -46,6 +46,10 @@
     @include vp-767 {
       padding: 80px 35px;
     }
+
+    @include vp-389 {
+      padding: 80px 20px;
+    }
   }
 
   &__overlay {
@@ -62,18 +66,19 @@
   &__content {
     position: relative;
 
-    width: 475px;
+    width: 600px;
     padding: 40px;
 
-    border-radius: 10px;
-    background-color: #ffffff;
+    border-radius: 8px;
+    background-color: $color-default-white;
+    box-shadow: 0 0 6px 0 rgba($color-pink-swan, 0.6);
 
-    @include vp-1023 {
+    @include vp-1199 {
       width: 100%;
     }
 
     @include vp-767 {
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
   }
 
@@ -109,6 +114,18 @@
 
       transition: color $trans-default;
     }
+
+    @include hover-focus {
+      svg {
+        color: $color-flamenco;
+      }
+    }
+
+    @include active {
+      svg {
+        color: $color-persimmon;
+      }
+    }
   }
 
   &--preload {
@@ -127,30 +144,5 @@
   iframe {
     max-width: 100%;
     border: none;
-  }
-
-  &--gallery {
-    .modal__content {
-      position: static;
-
-      background-color: $color-transparent;
-    }
-
-    .modal__close-button {
-      @include vp-1023 {
-        top: 0;
-        right: 0;
-      }
-
-      @include vp-767 {
-        top: 0;
-        right: 0;
-      }
-
-      svg {
-        width: 48px;
-        height: 48px;
-      }
-    }
   }
 }

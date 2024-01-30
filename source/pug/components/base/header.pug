@@ -41,7 +41,7 @@ mixin header(headerMods, currentUrl)
                   li.main-nav__item
                     a.main-nav__link(href=item.href)!=item.text
               .main-nav__additional-info
-                a.main-nav__call(href="#") Заказать звонок
+                button.btn-reset.main-nav__call(type="button" data-open-modal="request") Заказать звонок
                 .main-nav__contacts
                   a.main-nav__phone(href="tel:88124256427") 8 (812) 425-64-27
                   +socials().main-nav__socials

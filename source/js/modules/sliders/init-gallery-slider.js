@@ -19,6 +19,7 @@ const initGallerySlider = () => {
     navigation: {
       prevEl: controlPrev,
       nextEl: controlNext,
+      hiddenClass: '.swiper-button-hidden',
     },
     breakpoints: {
       320: {

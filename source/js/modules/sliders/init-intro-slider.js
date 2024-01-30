@@ -15,6 +15,7 @@ const initIntroSlider = () => {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      hiddenClass: '.swiper-pagination-hidden',
     },
   });
 };

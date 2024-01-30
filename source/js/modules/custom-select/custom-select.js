@@ -87,6 +87,23 @@ export class CustomSelect {
       }
 
       item.setAttribute('aria-selected', 'true');
+      if (item.closest('[data-select-ajax]')) {
+        const request = new XMLHttpRequest();
+
+        const formData = 'sortten=' + item.dataset.selectValue;
+
+        request.responseType = 'text';
+        request.open('POST', '/local/templates/Electric/ajax/catalog-sort.php');
+
+        request.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            location.reload();
+          }
+        };
+
+        request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        request.send(formData);
+      }
       buttonText.innerText = itemText;
       options[index].selected = true;
       this._closeSelect();

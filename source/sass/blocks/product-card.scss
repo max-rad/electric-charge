@@ -29,7 +29,9 @@
   &__image {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0 0 24px;
+    height: 280px;
 
     border-radius: 8px;
 
@@ -39,7 +41,7 @@
 
       border-radius: 8px;
 
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 

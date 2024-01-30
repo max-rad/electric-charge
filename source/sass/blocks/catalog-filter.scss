@@ -195,4 +195,35 @@
       margin: 0;
     }
   }
+
+  &__buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 0;
+  }
+
+  &__show {
+    width: 100%;
+    margin: 0 0 20px;
+
+    @include vp-1199 {
+      max-width: 320px;
+    }
+
+    @include vp-767 {
+      max-width: unset;
+    }
+  }
+
+  &__reset {
+    width: 100%;
+
+    @include vp-1199 {
+      max-width: 320px;
+    }
+
+    @include vp-767 {
+      max-width: unset;
+    }
+  }
 }

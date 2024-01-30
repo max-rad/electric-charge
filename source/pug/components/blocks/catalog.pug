@@ -640,31 +640,26 @@ mixin catalog()
               +icon("icon-close", 48, 48)
           +catalog-categories(categoriesElements).catalog__categories
           +catalog-filter(filterElements)
-          +btn({type: "button", text: "Показать"}).btn--orange.catalog__show
         .catalog__main
           .catalog__sort
             +custom-select({
               name: "sort",
               list: [
                 {
+                  value: "",
+                  text: "Сортировать по цене",
+                  isActive: "true"
+                },
+                {
                   value: "price-up",
                   text: "По&nbsp;возрастанию цены",
-                  isActive: "true"
                 },
                 {
                   value: "price-down",
                   text: "По&nbsp;убыванию цены"
-                },
-                {
-                  value: "popular",
-                  text: "Популярные"
-                },
-                {
-                  value: "new",
-                  text: "Новинки"
                 }
               ]
-            }).catalog__select
+            }).catalog__select(data-select-ajax)
             button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-filter-menu).btn-reset.catalog__toggle
               +icon("icon-setting", 24, 24)
               | Фильтры
