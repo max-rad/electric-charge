@@ -1195,8 +1195,8 @@ textarea {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0 1000px #ffffff;
-  box-shadow: inset 0 0 0 1000px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1000px #f5f5f5;
+  box-shadow: inset 0 0 0 1000px #f5f5f5;
   -webkit-text-fill-color: #000000;
 }
 
@@ -2684,6 +2684,7 @@ button,
   font-size: 16px;
   border-radius: 4px;
   background-color: #f5f5f5;
+  color: #000000;
 }
 
 .custom-input--small input::-webkit-input-placeholder {
@@ -2753,7 +2754,7 @@ button,
   line-height: 22px;
   border: none;
   border-radius: 12px;
-  background-color: #f3f3f3;
+  background-color: #f5f5f5;
   color: #000000;
   outline: none;
 }
@@ -4617,7 +4618,7 @@ button,
 .basket__item {
   position: relative;
   margin: 20px 0 0;
-  padding: 20px 0 0;
+  padding: 50px 0 0;
 }
 
 .basket__item::before {
@@ -4634,12 +4635,15 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .basket-card__checkbox {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   margin: 0 40px 0 0;
 }
 
@@ -4750,6 +4754,8 @@ button,
 }
 
 .basket-card__price-wrapper {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4785,6 +4791,13 @@ button,
 }
 
 .basket-card__total-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  min-width: 200px;
   margin: 0;
   font-weight: 700;
   font-size: 24px;
@@ -5991,7 +6004,7 @@ button,
   color: #f27121;
 }
 
-.feedback {
+.service__form {
   padding: 40px;
   border-radius: 8px;
   background-color: #ffffff;
@@ -6055,6 +6068,47 @@ button,
 
 .feedback__agreement a.focus-visible:focus {
   color: #f27121;
+}
+
+.feedback__success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 24px 0 0;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #11a857;
+}
+
+.feedback__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 10px 0 0;
+}
+
+.feedback__icon svg {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.feedback__text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: normal;
+  color: #ffffff;
 }
 
 .delivery {
@@ -6259,6 +6313,14 @@ button,
 
 .contacts__link.focus-visible:focus {
   color: #f27121;
+}
+
+.contacts__form {
+  padding: 40px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 6px 0 rgba(184, 182, 182, 0.6);
+  box-shadow: 0 0 6px 0 rgba(184, 182, 182, 0.6);
 }
 
 .page-not-found__wrapper {
@@ -7297,14 +7359,19 @@ button,
     content: "";
   }
 
+  .basket__item {
+    padding: 20px 0 0;
+  }
+
   .basket-card {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 64px 1fr 218px -webkit-max-content;
-    -ms-grid-columns: 64px 1fr 218px max-content;
-    grid-template-columns: 64px 1fr 218px -webkit-max-content;
-    grid-template-columns: 64px 1fr 218px max-content;
+    -ms-grid-columns: 64px 1fr 218px 200px;
+    grid-template-columns: 64px 1fr 218px 200px;
     row-gap: 30px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .basket-card__checkbox {
@@ -7370,6 +7437,7 @@ button,
   }
 
   .basket-card__total-price {
+    min-width: unset;
     font-size: 20px;
     line-height: 28px;
   }
@@ -8395,7 +8463,7 @@ button,
     margin: 0 0 30px;
   }
 
-  .feedback {
+  .service__form {
     padding: 40px 20px;
   }
 
@@ -8409,6 +8477,10 @@ button,
 
   .payment__list {
     margin: 0 0 30px;
+  }
+
+  .contacts__form {
+    padding: 40px 20px;
   }
 
   .page-not-found__wrapper {
@@ -8573,6 +8645,11 @@ button,
     -ms-grid-column: 2;
     -ms-grid-column-span: 3;
     grid-column: 2/5;
+  }
+
+  .basket-card__total-price {
+    font-size: 18px;
+    line-height: 25px;
   }
 
   .basket-card__remove {

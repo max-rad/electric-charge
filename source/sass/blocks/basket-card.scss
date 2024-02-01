@@ -1,11 +1,12 @@
 .basket-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   @include vp-1199 {
     display: grid;
-    grid-template-columns: 64px 1fr 218px max-content;
+    grid-template-columns: 64px 1fr 218px 200px;
     row-gap: 30px;
+    align-items: center;
   }
 
   @include vp-767 {
@@ -14,6 +15,8 @@
   }
 
   &__checkbox {
+    align-self: center;
+
     margin: 0 40px 0 0;
 
     @include vp-1439 {
@@ -182,6 +185,8 @@
   }
 
   &__price-wrapper {
+    flex-shrink: 0;
+
     display: flex;
     align-items: center;
     margin: 0 0 0 auto;
@@ -273,6 +278,10 @@
   }
 
   &__total-price {
+    display: flex;
+    justify-content: flex-end;
+
+    min-width: 200px;
     margin: 0;
 
     font-weight: 700;
@@ -283,6 +292,8 @@
     color: $color-default-black;
 
     @include vp-1199 {
+      min-width: unset;
+
       font-size: 20px;
       line-height: 28px;
     }
@@ -292,6 +303,11 @@
       grid-row: 2 / 3;
 
       margin: 0 0 0 auto;
+    }
+
+    @include vp-389 {
+      font-size: 18px;
+      line-height: 25px;
     }
   }
 

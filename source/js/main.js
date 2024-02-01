@@ -9,7 +9,7 @@ import {initCategoriesSlider} from './modules/sliders/init-categories-slider';
 import {initRecommendSlider} from './modules/sliders/init-recommend-slider';
 import {initWatchedSlider} from './modules/sliders/init-watched-slider';
 import {initFilter} from './modules/filter/init-filter';
-import { initGallerySlider } from './modules/sliders/init-gallery-slider';
+import {initGallerySlider} from './modules/sliders/init-gallery-slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {

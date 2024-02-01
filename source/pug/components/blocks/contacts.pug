@@ -29,4 +29,8 @@ mixin contacts()
           .contacts__content
             a.contacts__link(href="tel:88124256427") 8 (812) 425-64-27
             a.contacts__link(href="tel:+79216332072") +7 (921) 633-20-72
-    +feedback()
+    .contacts__form
+      +feedback({
+        title: "Хотите узнать больше?",
+        description: "Оставьте заявку, мы&nbsp;сами с&nbsp;вами свяжемся"
+      })

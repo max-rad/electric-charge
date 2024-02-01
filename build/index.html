@@ -713,16 +713,20 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <div class="request">
-          <form method="post">
-            <div class="request__wrapper">
-              <h2 class="request__title">Хотите узнать больше?</h2>
-              <p class="request__description">Оставьте заявку, мы&nbsp;сами с&nbsp;вами свяжемся</p>
-              <div class="custom-input request__input"><label><span class="custom-input__label">Ваше имя</span><input type="text" name="name" placeholder="Введите имя"></label></div>
-              <div class="custom-input request__input"><label><span class="custom-input__label">Ваш номер телефона</span><input type="tel" name="phone" placeholder="Введите номер телефона"></label></div><button class="btn btn--orange request__button" type="submit">Отправить заявку</button>
-              <p class="request__agreement">Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+        <div class="feedback">
+          <div class="feedback__wrapper">
+            <h2 class="feedback__title">Заказать звонок</h2>
+            <p class="feedback__description">Оставьте контакты для связи и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время.</p>
+            <form method="post">
+              <div class="custom-input feedback__input"><label><span class="custom-input__label">Ваше имя</span><input type="text" name="name" placeholder="Введите имя"></label></div>
+              <div class="custom-input feedback__input"><label><span class="custom-input__label">Ваш номер телефона</span><input type="tel" name="phone" placeholder="Введите номер телефона"></label></div>
+              <div class="custom-textarea feedback__textarea"><label><span class="custom-textarea__label">Ваш вопрос</span><textarea name="comment" placeholder="Напишите сообщение"></textarea></label></div><button class="btn btn--orange feedback__button" type="submit">Отправить заявку</button>
+              <p class="feedback__agreement">Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+            </form>
+            <div class="feedback__success"><span class="feedback__icon"><svg width="48" height="48" aria-hidden="true"><use xlink:href="#icon-check-circle-green"></use></svg></span>
+              <p class="feedback__text">Cпасибо, ваше сообщение принято.</p>
             </div>
-          </form>
+          </div>
         </div><button class="btn-reset modal__close-button" type="button" arial-label="Закрыть попап" data-close-modal><svg width="32" height="32" aria-hidden="true">
             <use xlink:href="#icon-close"></use>
           </svg></button>

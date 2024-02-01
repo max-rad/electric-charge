@@ -19,4 +19,7 @@ block main
 
 block modals
   +modal("modal--request")(data-modal="request")
-    +request()
+    +feedback({
+        title: "Заказать звонок",
+        description: "Оставьте контакты для связи и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время."
+      })

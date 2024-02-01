@@ -1,9 +1,9 @@
-mixin feedback()
+mixin feedback(data)
   .feedback
-    form(method="post")
-      .feedback__wrapper
-        h2.feedback__title Хотите узнать больше?
-        p.feedback__description Оставьте заявку, мы&nbsp;сами с&nbsp;вами свяжемся
+    .feedback__wrapper
+      h2.feedback__title!=data.title
+      p.feedback__description!=data.description
+      form(method="post")
         +custom-input({
           label: "Ваше имя",
           type: "text",
@@ -24,3 +24,7 @@ mixin feedback()
         +btn({type: "submit", text: "Отправить заявку"}).btn--orange.feedback__button
         p.feedback__agreement Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
           a(href="#") политикой обработки персональных данных
+      .feedback__success
+        span.feedback__icon
+          +icon("icon-check-circle-green", 48, 48)
+        p.feedback__text Cпасибо, ваше сообщение принято.
