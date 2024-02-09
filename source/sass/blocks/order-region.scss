@@ -1,5 +1,9 @@
 .order-region {
-  margin: 20px 0 30px;
+  margin: 0 0 30px;
+
+  &__payer-type {
+    display: none;
+  }
 
   &__label {
     margin: 0 0 20px;

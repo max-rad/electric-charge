@@ -1,6 +1,6 @@
 mixin order-card(data)
   .order-card
-    .order-card__link(href="#")
+    a.order-card__link(href="#")
       .order-card__image
         +img("content/basket", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
       h3.order-card__title!=data.title

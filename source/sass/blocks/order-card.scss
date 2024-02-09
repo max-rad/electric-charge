@@ -15,7 +15,7 @@
 
   &__link {
     display: flex;
-    margin: 0 20px 0 0;
+    margin: 0 auto 0 0;
 
     @include vp-1199 {
       grid-row: 1 / 3;
@@ -26,6 +26,18 @@
       grid-row: 1 / 2;
 
       margin: 0;
+    }
+
+    @include hover-focus {
+      .order-card__title {
+        color: $color-flamenco;
+      }
+    }
+
+    @include active {
+      .order-card__title {
+        color: $color-persimmon;
+      }
     }
   }
 
@@ -64,6 +76,7 @@
   }
 
   &__title {
+    max-width: 300px;
     margin: 0;
 
     font-weight: 600;
@@ -72,9 +85,7 @@
 
     color: $color-default-black;
 
-    @include vp-1199 {
-      max-width: 300px;
-    }
+    transition: color $trans-default;
 
     @include vp-767 {
       font-weight: 400;
@@ -104,11 +115,15 @@
   }
 
   &__price {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 200px;
     margin: 0;
 
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
+    white-space: nowrap;
 
     color: $color-default-black;
 

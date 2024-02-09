@@ -1,0 +1,98 @@
+mixin catalog-main()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "electric-scooter",
+          format: "webp",
+          width: "280",
+          height: "260",
+          alt: "Черный электросамокат"
+        },
+        title: "Электросамокаты"
+      },
+      {
+        href: "#",
+        image: {
+          src: "electric-bike",
+          format: "webp",
+          width: "280",
+          height: "260",
+          alt: "Черный электровелосипед"
+        },
+        title: "Электровелосипеды"
+      },
+      {
+        href: "#",
+        image: {
+          src: "electric-scooter",
+          format: "webp",
+          width: "280",
+          height: "260",
+          alt: "image"
+        },
+        title: "Электросамокаты"
+      },
+      {
+        href: "#",
+        image: {
+          src: "segway",
+          format: "webp",
+          width: "280",
+          height: "260",
+          alt: "Белый сигвей"
+        },
+        title: "Сигвеи"
+      },
+      {
+        href: "#",
+        image: {
+          src: "electric-scooter",
+          format: "webp",
+          width: "280",
+          height: "260",
+          alt: "Черный электросамокат"
+        },
+        title: "Электросамокаты"
+      },
+      {
+        href: "#",
+        image: {
+          src: "electric-bike",
+          format: "webp",
+          width: "280",
+          height: "260",
+          alt: "Черный электровелосипед"
+        },
+        title: "Электровелосипеды"
+      },
+      {
+        href: "#",
+        image: {
+          src: "electric-scooter",
+          format: "webp",
+          width: "280",
+          height: "260",
+          alt: "image"
+        },
+        title: "Электросамокаты"
+      },
+      {
+        href: "#",
+        image: {
+          src: "segway",
+          format: "webp",
+          width: "280",
+          height: "260",
+          alt: "Белый сигвей"
+        },
+        title: "Сигвеи"
+      }
+    ]
+
+  .catalog-main
+    ul.list-reset.catalog-main__list
+      each item in list
+        li.catalog-main__item
+          +category-card(item).category-card--catalog
