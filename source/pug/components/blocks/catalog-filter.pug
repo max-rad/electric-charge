@@ -22,6 +22,11 @@ mixin catalog-filter(elements)
                               label: item.label,
                               name: item.name
                             }).catalog-filter__checkbox
+                            .catalog-filter__range
+                              .catalog-filter__input
+                                input(type="number" name="min" placeholder="от 100")
+                              .catalog-filter__input
+                                input(type="number" name="max" placeholder="до 1000")
             .catalog-filter__buttons-wrapper
               +btn({type: "button", text: "Показать"}).btn--orange.catalog-filter__show
               +btn({type: "button", text: "Сбросить"}).catalog-filter__reset
