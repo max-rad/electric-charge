@@ -156,14 +156,29 @@
     height: 90px;
     margin: 0 0 20px;
 
+    cursor: pointer;
+    user-select: none;
+
     @include vp-767 {
       width: 60px;
       height: 60px;
       margin: 0 24px 0 0;
     }
 
+    &.swiper-slide-thumb-active {
+      .product__image--small {
+        border: 1px solid $color-pumpkin;
+      }
+    }
+
     &:last-child {
       margin: 0;
+    }
+
+    @include hover-focus {
+      .product__image--small {
+        border: 1px solid $color-pumpkin;
+      }
     }
   }
 
@@ -188,6 +203,8 @@
       height: 90px;
 
       border: 1px solid $color-default-black;
+
+      transition: border $trans-default;
 
       @include vp-767 {
         width: 60px;
