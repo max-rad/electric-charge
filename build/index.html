@@ -247,7 +247,7 @@
   <div class="wrapper">
     <header class="header" data-header data-media="(max-width: 1199px)">
       <div class="container">
-        <div class="header__wrapper"><a class="header__logo" href="/" aria-label="Переход на главную"><img src="img/svg/logo.svg" width="210" height="85" alt="Логотип Электрический Заряд"></a>
+        <div class="header__wrapper"><a class="header__logo" href="/" aria-label="Переход на главную"><img src="img/svg/logo.svg" width="300" height="76" alt="Логотип Электрический Заряд"></a>
           <nav class="main-nav"><button class="btn-reset main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-toggle-menu><span></span><span></span><span></span></button>
             <div class="main-nav__menu">
               <div class="main-nav__top">
@@ -490,49 +490,49 @@
         <div class="container">
           <div class="section__wrapper">
             <h2 class="title title--h2 section__title">Бренды</h2>
-            <div class="brands">
-              <ul class="list-reset brands__list">
-                <li class="brands__item">
+            <div class="brands" data-show-more>
+              <ul class="list-reset brands__list" data-show-more="list">
+                <li class="brands__item" data-show-more="item">
                   <div class="brand-card">
                     <div class="brand-card__image"><img src="img/content/brands/logo-xiaomi.webp" srcset="img/content/brands/logo-xiaomi@2x.webp 2x" width="200" height="90" alt="Логотип Xiaomi"></div>
                   </div>
                 </li>
-                <li class="brands__item">
+                <li class="brands__item" data-show-more="item">
                   <div class="brand-card">
                     <div class="brand-card__image"><img src="img/content/brands/logo-white-siberia.webp" srcset="img/content/brands/logo-white-siberia@2x.webp 2x" width="200" height="90" alt="Логотип White Siberia"></div>
                   </div>
                 </li>
-                <li class="brands__item">
+                <li class="brands__item" data-show-more="item">
                   <div class="brand-card">
                     <div class="brand-card__image"><img src="img/content/brands/logo-green-camel.webp" srcset="img/content/brands/logo-green-camel@2x.webp 2x" width="200" height="90" alt="Логотип Green Camel"></div>
                   </div>
                 </li>
-                <li class="brands__item">
+                <li class="brands__item" data-show-more="item">
                   <div class="brand-card">
                     <div class="brand-card__image"><img src="img/content/brands/logo-syccyba.webp" srcset="img/content/brands/logo-syccyba@2x.webp 2x" width="200" height="90" alt="Логотип Syccyba"></div>
                   </div>
                 </li>
-                <li class="brands__item">
+                <li class="brands__item" data-show-more="item">
                   <div class="brand-card">
                     <div class="brand-card__image"><img src="img/content/brands/logo-minako.webp" srcset="img/content/brands/logo-minako@2x.webp 2x" width="200" height="90" alt="Логотип Minako"></div>
                   </div>
                 </li>
-                <li class="brands__item">
+                <li class="brands__item" data-show-more="item">
                   <div class="brand-card">
                     <div class="brand-card__image"><img src="img/content/brands/logo-volteco.webp" srcset="img/content/brands/logo-volteco@2x.webp 2x" width="200" height="90" alt="Логотип Volteco"></div>
                   </div>
                 </li>
-                <li class="brands__item">
+                <li class="brands__item" data-show-more="item">
                   <div class="brand-card">
                     <div class="brand-card__image"><img src="img/content/brands/logo-ninebot.webp" srcset="img/content/brands/logo-ninebot@2x.webp 2x" width="200" height="90" alt="Логотип Ninebot"></div>
                   </div>
                 </li>
-                <li class="brands__item">
+                <li class="brands__item" data-show-more="item">
                   <div class="brand-card">
                     <div class="brand-card__image"><img src="img/content/brands/logo-eltreco.webp" srcset="img/content/brands/logo-eltreco@2x.webp 2x" width="200" height="90" alt="Логотип Eltreco"></div>
                   </div>
                 </li>
-              </ul><a class="btn brands__button" href="#">Смотреть все</a>
+              </ul><a class="btn brands__button" href="#" data-show-more="button">Смотреть все</a>
             </div>
           </div>
         </div>
@@ -653,7 +653,7 @@
     <footer class="footer">
       <div class="footer__background"><img src="img/svg/footer-background.svg" width="433" height="214" alt=""></div>
       <div class="container">
-        <div class="footer__wrapper"><a class="footer__logo" href="/" aria-label="Переход на главную"><img src="img/svg/logo.svg" width="210" height="85" alt="Логотип Электрический Заряд"></a>
+        <div class="footer__wrapper"><a class="footer__logo" href="/" aria-label="Переход на главную"><img src="img/svg/logo.svg" width="300" height="76" alt="Логотип Электрический Заряд"></a>
           <div class="footer__requisites">
             <p class="footer__label">Реквизиты:</p>
             <div class="footer__text-wrapper">
@@ -695,7 +695,9 @@
             <li class="footer__item"><a class="footer__link" href="#">Доставка и&nbsp;оплата</a></li>
             <li class="footer__item"><a class="footer__link" href="#">Гарантия и&nbsp;возврат</a></li>
           </ul>
-          <div class="footer__info"><a class="footer__offer" href="#">Публичная оферта</a><a class="footer__policy" href="#">Политика обработки персональных данных</a></div>
+          <div class="footer__info"><a class="footer__offer" href="#">Публичная оферта</a><a class="footer__policy" href="#">Политика обработки персональных данных</a><a class="footer__policy" href="#">Сайт разработан в студии Van Gogh Link</a>
+            <p class="footer__recaptcha">Этот сайт защищен от&nbsp;спама сервисом reCAPTCHA от&nbsp;компании Google. <a href="https://policies.google.com/privacy">Privacy Policy</a>/<a href="https://policies.google.com/terms">Terms of&nbsp;Service</a></p>
+          </div>
           <div class="footer__payment">
             <div class="footer__icon"><svg width="46" height="13" aria-hidden="true">
                 <use xlink:href="#icon-mir"></use>

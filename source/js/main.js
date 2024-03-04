@@ -10,18 +10,23 @@ import {initRecommendSlider} from './modules/sliders/init-recommend-slider';
 import {initWatchedSlider} from './modules/sliders/init-watched-slider';
 import {initFilter} from './modules/filter/init-filter';
 import {initGallerySlider} from './modules/sliders/init-gallery-slider';
+import {initShowMore} from './modules/init-show-more';
+import {initRecaptcha} from './modules/init-recaptcha';
 
 
 window.addEventListener('DOMContentLoaded', () => {
+  initRecaptcha();
+  initHeader();
+  initModals();
+  initIntroSlider();
+  initCustomSelect();
+  initPhoneMask();
+  initPhoneValidation();
+  initShowMore();
+
   window.addEventListener('load', () => {
-    initHeader();
-    initModals();
-    initCustomSelect();
     initFilter();
     initAccordion();
-    initPhoneMask();
-    initPhoneValidation();
-    initIntroSlider();
     initCategoriesSlider();
     initRecommendSlider();
     initWatchedSlider();

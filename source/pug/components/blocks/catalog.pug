@@ -633,15 +633,15 @@ mixin catalog()
   .catalog
     form(method="get")
       .catalog__wrapper
-        .catalog__filter(data-filter data-media="(max-width: 1199px)")
+        .catalog__aside(data-filter data-media="(max-width: 1199px)")
           .catalog__top
             button.btn-reset.catalog__return(type="button" aria-label="Закрыть меню фильтров" data-filter-close)
               +icon("icon-arrow-return", 24, 24)
             p.catalog__label Фильтры
             button.btn-reset.catalog__close(type="button" aria-label="Закрыть меню фильтров" data-filter-close)
               +icon("icon-close", 48, 48)
+          +catalog-filter(filterElements).catalog__filter
           +catalog-categories(categoriesElements).catalog__categories
-          +catalog-filter(filterElements)
         .catalog__main
           .catalog__sort
             +custom-select({

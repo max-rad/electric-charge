@@ -12,7 +12,9 @@
     align-items: center;
     padding: 10px;
 
-    &:nth-child(2n - 1) {
+    border-radius: 4px;
+
+    &:nth-child(2n) {
       background-color: $color-white-smoke;
     }
   }

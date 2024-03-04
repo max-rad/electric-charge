@@ -14,6 +14,10 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 40px;
     row-gap: 40px;
+    max-height: 438px;
+    padding: 5px;
+
+    overflow: hidden;
 
     @include vp-1439 {
       column-gap: 20px;
@@ -31,6 +35,12 @@
       flex-direction: column;
       column-gap: unset;
       row-gap: unset;
+      max-height: 876px;
+    }
+
+    &.is-open {
+      max-height: unset;
+      overflow: visible;
     }
   }
 

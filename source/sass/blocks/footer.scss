@@ -38,11 +38,11 @@
   &__wrapper {
     position: relative;
     display: grid;
-    grid-template-columns: 228px 391px 151px 215px;
+    grid-template-columns: 290px 391px 151px 215px;
     column-gap: 20px;
     justify-content: space-between;
     max-width: 1300px;
-    padding: 60px 0 54px;
+    padding: 60px 0 144px;
 
     @include vp-1199 {
       grid-template-columns: 1fr 318px;
@@ -59,39 +59,57 @@
   }
 
   &__logo {
+    z-index: 1;
+    position: absolute;
     display: block;
-    width: 210px;
-    height: 85px;
+
+    top: 60px;
+    left: 0;
+
+    width: 300px;
+    height: 76px;
     margin: 0 0 20px;
 
     @include vp-1199 {
       grid-column: 1 / 3;
 
+      position: relative;
+
+      top: 0;
+
+      width: 232px;
+      height: 58px;
       margin: 0 0 40px;
     }
 
     @include vp-767 {
-      width: 167px;
-      height: 68px;
+      width: 200px;
+      height: 50px;
     }
 
     img {
-      width: 210px;
-      height: 85px;
+      width: 300px;
+      height: 76px;
+
+      @include vp-1199 {
+        width: 232px;
+        height: 58px;
+      }
 
       @include vp-767 {
-        width: 167px;
-        height: 68px;
+        width: 200px;
+        height: 50px;
       }
     }
   }
 
   &__requisites {
-    grid-row: 2 / 3;
+    grid-row: 1 / 3;
 
     position: relative;
     display: flex;
     flex-direction: column;
+    padding: 96px 0 0;
 
     @include vp-1199 {
       grid-column: 1 / 3;
@@ -415,7 +433,7 @@
   }
 
   &__policy {
-    margin: 0;
+    margin: 0 0 20px;
 
     font-weight: 400;
     font-size: 15px;
@@ -437,6 +455,62 @@
 
     @include hover-focus {
       color: $color-persimmon;
+    }
+  }
+
+  &__developed-by {
+    margin: 0 0 20px;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    text-decoration: underline;
+
+    color: $color-grey;
+
+    transition: color $trans-default;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include hover-focus {
+      color: $color-pumpkin;
+    }
+
+    @include hover-focus {
+      color: $color-persimmon;
+    }
+  }
+
+  &__recaptcha {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+
+    color: $color-grey;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    a {
+      color: $color-grey;
+      text-decoration: underline;
+
+      transition: color $trans-default;
+
+      @include hover-focus {
+        color: $color-pumpkin;
+      }
+
+      @include hover-focus {
+        color: $color-persimmon;
+      }
     }
   }
 

@@ -18,7 +18,7 @@
     }
   }
 
-  &__filter {
+  &__aside {
     @include vp-1199 {
       z-index: 100;
       position: absolute;
@@ -145,7 +145,7 @@
     }
   }
 
-  &__categories {
+  &__filter {
     margin: 0 0 60px;
 
     @include vp-1199 {
@@ -239,7 +239,7 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: max-content;
     column-gap: 40px;
     row-gap: 40px;
@@ -250,7 +250,7 @@
     }
 
     @include vp-1279 {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
 
     @include vp-1199 {

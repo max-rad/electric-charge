@@ -1,5 +1,5 @@
 mixin catalog-filter(elements)
-  .catalog-filter
+  .catalog-filter&attributes(attributes)
     .catalog-filter__accordion(data-accordion="parent" data-destroy="(max-width: 1199px)")
       .catalog-filter__element(data-accordion="element")
         button.btn-reset.catalog-filter__button(type="button" data-accordion="button")

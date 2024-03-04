@@ -76,9 +76,9 @@ mixin brands()
     ]
 
   +section({title: "Бренды"})
-    .brands
-      ul.list-reset.brands__list
+    .brands(data-show-more)
+      ul.list-reset.brands__list(data-show-more="list")
         each item in list
-          li.brands__item
+          li.brands__item(data-show-more="item")
             +brand-card(item)
-      +btn({href: "#", text: "Смотреть все"}).brands__button
+      +btn({href: "#", text: "Смотреть все"})(data-show-more="button").brands__button
